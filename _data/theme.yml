@@ -1,0 +1,8 @@
+primary: "#73000a"
+primary_dark: "#570008"
+primary_light: "#844247"
+secondary: "#fff2e3"
+tertiary: "#676156"
+background: "#ffffff"
+on_primary: "#ffffff"
+on_background: "#000000"

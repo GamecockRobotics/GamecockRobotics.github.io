@@ -1,0 +1,27 @@
+- one:
+  first: Riley
+  last: Gleaton
+  roles:
+    - President
+  personal_description: >-
+    A Junior majoring in Physics, Riley enjoys Japanese culture and sweet foods. She also enjoys 
+    board games and making dresses. 
+  professional_description: >-
+    She has done Vex Robotics for 6 years. She has experience as a former team captain of her high
+    school team. Now, Riley manages the club by handling the paperwork and communications with the 
+    university. She also manages the other officers and ensures they are diligent with their workload.
+  image: /assets/Riley.jpg
+- two:
+  first: Nathanael
+  last: Oliver
+  roles:
+    - Treasurer
+    - Lead Programmer
+  personal_description: >-
+    Nathan is dual majoring in Computer Science and Mathematics. He enjoys outdoor activities like 
+    rock climbing and kayaking. He is also an officer and former president of cybersecurity club.
+  professional_description: >-
+    He has been doing Vex Robotics for 6 years. He was the team captain of his high school team as well
+    as the lead programmer. Currently, Nathan acts as the treasurer for the club, managing their finances.
+    He also works as the lead programmer for the robots as well as lead web developer for the team.
+  image: /assets/Nathan.jpg

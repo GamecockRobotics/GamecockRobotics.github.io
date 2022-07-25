@@ -1,0 +1,81 @@
+<style>
+    .column {
+        margin-left: 3%;
+        width: 30%;
+        float: left;
+        min-width: 250px;
+    }
+
+    .column img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .content {
+        margin-left: 0%;
+        margin-top: 40px;
+    }
+
+    .content p {
+        color: #000;
+    }
+
+    .content h1 {
+        color: #000;
+    }
+
+    .content h2 {
+        color: #000;
+    }
+
+    .content h3 {
+        color: #000;
+    }
+    .content:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    .main {
+        width:70%;
+        float: left;
+    }
+    .main p {
+        color: #000;
+    }
+
+    .main h1 {
+        color: #000;
+    }
+
+    .main h2 {
+        color: #000;
+    }
+
+    .main h3 {
+        color: #000;
+    }
+    .aside{
+        width:30%;
+        float: right;
+    }
+
+    @media all and (max-width: 900px) {
+        main {
+            width:100%;
+        }
+        aside {
+            width:100%;
+        }
+    }
+</style>
+<body>
+    {% include Header.html %}
+    {% for profile in site.data.members %}
+        {% include Profile.html member=profile %}
+    {% endfor %}
+    {% include Footer.html %}
+</body>
