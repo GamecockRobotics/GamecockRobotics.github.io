@@ -1,38 +1,8 @@
 <style>
-    .column {
-        margin-left: 3%;
-        width: 30%;
-        float: left;
-        min-width: 250px;
-    }
-
-    .column img {
-        width: auto;
-        height: auto;
-        max-width: 100%;
-        max-height: 100%;
-    }
-
     .content {
-        margin-left: 0%;
         margin-top: 40px;
     }
 
-    .content p {
-        color: #000;
-    }
-
-    .content h1 {
-        color: #000;
-    }
-
-    .content h2 {
-        color: #000;
-    }
-
-    .content h3 {
-        color: #000;
-    }
     .content:after {
         content: "";
         display: table;
@@ -40,9 +10,10 @@
     }
 
     .main {
-        width:70%;
+        width: 70%;
         float: left;
     }
+
     .main p {
         color: #000;
     }
@@ -58,24 +29,55 @@
     .main h3 {
         color: #000;
     }
-    .aside{
-        width:30%;
-        float: right;
+
+    .aside {
+        width:25%;
+        float: left;
+        left: 70%
     }
 
-    @media all and (max-width: 900px) {
-        main {
-            width:100%;
+    .sticky-aside {
+        width: 25%;
+        float: left;
+        position: fixed;
+        top: 100;
+    }
+
+    @media (max-width: 1000px) {
+        .main {
+            width: 100%;
         }
-        aside {
-            width:100%;
+
+        .aside {
+            width: 100%;
         }
     }
 </style>
+
 <body>
     {% include Header.html %}
-    {% for profile in site.data.members %}
-        {% include Profile.html member=profile %}
-    {% endfor %}
+    <div class="content">
+        <div class="main">
+            {% for profile in site.data.members %}
+            {% include Profile.html member=profile %}
+            {% endfor %}
+        </div>
+        <div id="aside" class="aside">
+            <p style="color:#000;">
+                I want to test putting some text here and seeing how it looks. I need another sentence for testing purposes</p>
+        </div>
+    </div>
     {% include Footer.html %}
 </body>
+{% include scripts.html %}
+<!--
+    1000 < screen width
+        large margin; [Text; Image;](alternate order) Aside (vertical) (sticky)
+    500 < screen width < 1000
+        large margin; aside (horizontal)
+        large margin; [Text; Image](alternate order)
+    screen width < 500
+        small margin; aside (vertical)
+        Image
+        Text
+-->

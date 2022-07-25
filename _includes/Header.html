@@ -4,8 +4,8 @@
   }
   .full-screen-width {
       position: relative;
-      max-width: 100vw;
-      width: 100vw;
+      max-width: 100%;
+      width: 100%;
       height: 190px;
       margin: 0;
   }
@@ -21,26 +21,8 @@
       top: 0;
       width: 100%;
   }
-
-  .sticky+.content {
-      padding-top: 100px;
-  }
 </style>
 <img class="full-screen-width" src="{{site.baseurl}}/assets/banner.jpg">
 <div class="navbar" id="navbar">
   <h2>My Header</h2>
 </div>
-<script>
-  window.onscroll = function () { myFunction() };
-
-  var header = document.getElementById("navbar");
-  var sticky = header.offsetTop;
-
-  function myFunction() {
-      if (window.pageYOffset > sticky) {
-          header.classList.add("sticky");
-      } else {
-          header.classList.remove("sticky");
-      }
-  }
-</script>
