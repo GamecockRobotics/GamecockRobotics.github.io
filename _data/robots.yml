@@ -1,0 +1,6 @@
+one:
+  name: "Push Bot"
+  description: "First bot, no parts, sad boi"
+  images: 
+    - "/assets/profiles/Riley.jpg"
+    - "/assets/profiles/Nathan.jpg"
