@@ -1,8 +1,11 @@
 <style>
     .profile {
         background-color: antiquewhite;
+        padding-left: 100px;
         padding-right: 20px;
         padding-bottom: 20px;
+        display: flex;
+        flex-direction: row;
     }
 
     .profile:after {
@@ -26,12 +29,21 @@
     .member_info {
         float: left;
         max-width: 60%;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
-    .member-text {
-        margin-left: 100px;
-        margin-right:40px;
-        float: left;
+    .profile:nth-of-type(even) .member_info {
+        order:2;
+    }
+    .profile:nth-of-type(odd) .member_info {
+        order:1;
+    }
+    .profile:nth-of-type(even) .profile_pic {
+        order:1;
+    }
+    .profile:nth-of-type(odd) .profile_pic {
+        order:2;
     }
 
     .profile_pic {
@@ -44,23 +56,19 @@
         max-width: 100%;
     }
 
-    @media (max-width: 600px) {
+    @media (max-width: 500px) {
         .profile {
-            display: flex;
             flex-direction: column;
+            padding-left: 20px;
         }
         .member_info {
-            order: 2;
+            order: 2 !important;
             min-width: 100%;
-        }
-
-        .member-text {
             margin-left: 20px;
-            margin-right: 20px;
         }
 
         .profile_pic {
-            order: 1;
+            order: 1 !important;
             width: 90%;
             float: left;
             margin-left: 20px;
@@ -70,16 +78,14 @@
 
 <div class="profile">
     <div class="member_info">
-        <div class="member-text">
-            <h1>{{ include.member.first }} {{ include.member.last }}</h1>
-            <h2>
-                {% for role in include.member.roles %}
+        <h1>{{ include.member.first }} {{ include.member.last }}</h1>
+        <h2>
+            {% for role in include.member.roles %}
                 ——{{role}}
-                {% endfor %}
-            </h2>
-            <p>{{ include.member.personal_description }}</p>
-            <p>{{ include.member.professional_description }}</p>
-        </div>
+            {% endfor %}
+        </h2>
+        <p>{{ include.member.personal_description }}</p>
+        <p>{{ include.member.professional_description }}</p>
     </div>
     <div class="profile_pic">
         <img src={{include.member.image}}>
