@@ -1,6 +1,6 @@
 <style>
     .profile {
-        background-color: antiquewhite;
+        background-color: {{ site.data.theme.background }};
         padding-left: 100px;
         padding-right: 20px;
         padding-bottom: 20px;
@@ -26,58 +26,59 @@
         color: {{site.data.theme.on_background}};
     }
 
-    .member_info {
+    .member-info {
         float: left;
         max-width: 60%;
         margin-left: 20px;
         margin-right: 20px;
     }
 
-    .profile:nth-of-type(even) .member_info {
+    .profile:nth-of-type(even) .member-info {
         order:2;
     }
-    .profile:nth-of-type(odd) .member_info {
+    .profile:nth-of-type(odd) .member-info {
         order:1;
     }
-    .profile:nth-of-type(even) .profile_pic {
+    .profile:nth-of-type(even) .profile-pic {
         order:1;
     }
-    .profile:nth-of-type(odd) .profile_pic {
+    .profile:nth-of-type(odd) .profile-pic {
         order:2;
     }
 
-    .profile_pic {
+    .profile-pic {
         margin-top: 20px;
         float: right;
         width: 40%;
     }
 
-    .profile_pic img {
+    .profile-pic img {
         max-width: 100%;
     }
 
-    @media (max-width: 500px) {
+    @media (max-width: 600px) {
         .profile {
             flex-direction: column;
             padding-left: 20px;
+            padding-right: 20px;
         }
-        .member_info {
+        .member-info {
             order: 2 !important;
             min-width: 100%;
-            margin-left: 20px;
+            margin-left: 0px;
         }
 
-        .profile_pic {
+        .profile-pic {
             order: 1 !important;
             width: 90%;
             float: left;
-            margin-left: 20px;
+            margin-left: 0px;
         }
     }
 </style>
 
 <div class="profile">
-    <div class="member_info">
+    <div class="member-info">
         <h1>{{ include.member.first }} {{ include.member.last }}</h1>
         <h2>
             {% for role in include.member.roles %}
@@ -87,7 +88,7 @@
         <p>{{ include.member.personal_description }}</p>
         <p>{{ include.member.professional_description }}</p>
     </div>
-    <div class="profile_pic">
+    <div class="profile-pic">
         <img src={{include.member.image}}>
     </div>
 </div>

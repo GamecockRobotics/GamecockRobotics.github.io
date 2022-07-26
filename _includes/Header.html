@@ -11,15 +11,13 @@
   }
 
   .navbar {
-      padding: 9px 16px;
+      position: sticky;
+      top: 0px;
+      height: 75px;
+      padding: 4px 16px;
       background: {{site.data.theme.primary}};
       color: {{site.data.theme.on_primary}};
-  }
-
-  .sticky {
-      position: fixed;
-      top: 0;
-      width: 100%;
+      z-index: +1;
   }
 </style>
 <img class="full-screen-width" src="{{site.baseurl}}/assets/banner.jpg">

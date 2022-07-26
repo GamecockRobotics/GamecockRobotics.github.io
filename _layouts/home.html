@@ -1,8 +1,4 @@
 <style>
-    .content {
-        margin-top: 40px;
-    }
-
     .content:after {
         content: "";
         display: table;
@@ -14,42 +10,30 @@
         float: left;
     }
 
-    .main p {
+    .main p, .main h1, .main h2, .main h3 {
         color: #000;
     }
 
-    .main h1 {
-        color: #000;
-    }
-
-    .main h2 {
-        color: #000;
-    }
-
-    .main h3 {
-        color: #000;
-    }
-
-    .aside {
-        width:25%;
+    .sidebar {
+        width: 30%;
         float: left;
-        left: 70%
-    }
-
-    .sticky-aside {
-        width: 25%;
-        float: left;
-        position: fixed;
-        top: 100;
+        position: sticky;
+        top: 85;
+        z-index: 0;
     }
 
     @media (max-width: 1000px) {
         .main {
             width: 100%;
+            order: 2;
         }
-
-        .aside {
+        .content {
+            display: flex;
+            flex-direction: column;
+        }
+        .sidebar {
             width: 100%;
+            position: static;
         }
     }
 </style>
@@ -62,22 +46,21 @@
             {% include Profile.html member=profile %}
             {% endfor %}
         </div>
-        <div id="aside" class="aside">
-            <p style="color:#000;">
-                I want to test putting some text here and seeing how it looks. I need another sentence for testing purposes</p>
+        <div class="sidebar">
+            {% include VexIntro.html %}
         </div>
     </div>
     {% include Footer.html %}
 </body>
-{% include scripts.html %}
 <!--
-    1000 < screen width
-        large margin; [Text; Image;](alternate order) Aside (vertical) (sticky)
-    500 < screen width < 1000
-        large margin; aside (horizontal)
-        large margin; [Text; Image](alternate order)
-    screen width < 500
-        small margin; aside (vertical)
-        Image
-        Text
+    ---
+    TO DO
+    ---
+    Aside
+     - Vertical > 1000
+     - Vertical < 500
+     - border < 500
+     - Horizontal < 1000 & > 500
+     - small margin < 500
+     - large margin < 1000 & > 500
 -->
