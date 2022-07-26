@@ -1,4 +1,6 @@
+
 <style>
+    {%include robot-styles %}
     .robot-content {
         display: flex;
         flex-direction: row;
@@ -7,6 +9,7 @@
         width: 30%;
         float: left;
         background-color: blue;
+        position: relative;
     }
     .robot-description {
         width: 30%;
@@ -16,33 +19,6 @@
         width:30%;
         float: left;
     }
-    .robot-slide {
-        display: none;
-    }
-    .prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
 </style>
 <div>
     <div>
