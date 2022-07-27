@@ -54,8 +54,9 @@
 
     .profile-pic img {
         max-width: 100%;
-        max-height: 250px;
+        max-height: 350px;
     }
+
 
     @media (max-width: 600px) {
         .profile {
@@ -86,6 +87,8 @@
                 ——{{role}}
             {% endfor %}
         </h2>
+        {% include socials.html accounts=include.member.socials %}
+        
         <p>{{ include.member.personal_description }}</p>
         <p>{{ include.member.professional_description }}</p>
     </div>

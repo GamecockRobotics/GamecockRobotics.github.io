@@ -19,8 +19,30 @@
       background: {{site.data.theme.primary}};
       color: {{site.data.theme.on_primary}};
   }
+
+  .tab {
+    display: inline-block;
+    margin-left: 40px;
+  }
+
+  .navbar a {
+    font-size: 24;
+    text-decoration: none;
+    color: {{site.data.theme.on_primary}};
+  }
+  .centered {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 </style>
-<img class="full-screen-width" src="{{site.baseurl}}/assets/banner.jpg">
+<img class="full-screen-width" src="/assets/banner.jpg">
 <div class="navbar" id="navbar">
-  <h2>My Header</h2>
+  <div class="centered">
+  {% assign pages = site.pages | where_exp: 'page', 'page.url contains "_pages"' %}
+  {% for page in pages %}
+    <a href="{{page.url}}">{{page.title}}</a>
+    <span class="tab"></span>
+  {% endfor %}
+</div>
 </div>
