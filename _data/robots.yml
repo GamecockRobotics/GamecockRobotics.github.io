@@ -1,6 +1,205 @@
-one:
+- one:
   name: "Push Bot"
   description: "First bot, no parts, sad boi"
   images: 
     - "/assets/profiles/Riley.jpg"
     - "/assets/profiles/Nathan.jpg"
+  link:
+    - "https://www.youtube.com/embed/wIZgvVDZc2Y"
+  statistics:
+    - one:
+      competition: Tigertown Throwdown
+      a_skills: 1
+      d_skills: 190
+      matches:
+        - one:
+          opponent: CSM
+          score: 60
+          o_score: 171
+          alliance: blue
+          match: "Qualifier #3"
+        - two:
+          opponent: GATR2
+          score: 40
+          o_score: 67
+          alliance: red
+          match: "Qualifier #17"
+        - three:
+          opponent: PNTHR
+          score: 71
+          o_score: 153
+          alliance: blue
+          match: "Qualifier #23"
+        - four:
+          opponent: BCUZ2
+          score: 117
+          o_score: 40
+          alliance: blue
+          match: "Qualifire #29"
+        - five:
+          opponent: NUKE
+          score: 60
+          o_score: 191
+          alliance: blue
+          match: "Qualifier #34"
+        - six:
+          opponent: GATR1
+          score: 111
+          o_score: 147
+          alliance: red
+          match: "Qualifier #10"
+        - seven:
+          opponent: AUBIE1
+          score: 147
+          o_score: 20
+          alliance: blue
+          match: "Round of 16"
+        - eight:
+          opponent: NUKE
+          score: 40
+          o_score: 162
+          alliance: blue
+          match: "Quater Finals #4"
+- two:
+  name: "Big Chungus and Lil' Sexy"
+  description: ""
+  images: 
+    - "/assets/profiles/Riley.jpg"
+    - "/assets/profiles/Nathan.jpg"
+  statistics:
+    - one:
+      competition: West Virginia VEX U Qualifier
+      a_skills: 80
+      d_skills: 283
+      matches:
+      - one:
+        opponent: FR7
+        score: 46
+        o_score: 60
+        alliance: blue
+        match: "Qualifier #1"
+      - two:
+        opponent: CSM
+        score: 46
+        o_score: 94
+        alliance: red
+        match: "Qualifier #8"
+      - three:
+        opponent: SHEP1
+        score: 60
+        o_score: 66
+        alliance: blue
+        match: "Qualifier #13"
+      - four:
+        opponent: ONU1
+        score: 156
+        o_score: 80
+        alliance: red
+        match: "Qualifier #19"
+      - five:
+        opponent: SKAR
+        score: 134
+        o_score: 107
+        alliance: blue
+        match: "Qualifier #24"
+      - six:
+        opponent: NUKE
+        score: 41
+        o_score: 73
+        alliance: red
+        match: "Qualifier #27"
+      - seven:
+        opponent: WVUR1
+        score: 156
+        o_score: 173
+        alliance: red
+        match: "Qualifier #33"
+      - eight:
+        opponent: UMBC
+        score: 41
+        o_score: 165
+        alliance: blue
+        match: "Qualifier #40"
+      - nine:
+        opponent: ICTRL
+        score: 92
+        o_score: 63
+        alliance: blue
+        match: "Qualifier #44"
+      - ten:
+        opponent: WVUR1
+        score: 179
+        o_score: 60
+        alliance: blue
+        match: "Quater Final #2"
+      - eleven:
+        opponent: NUKE
+        score: 163
+        o_score: 187
+        alliance: blue
+        match: "Semi Final #1"
+    - two:
+      competition: Salisbury University VEX U Winter Tournament
+      a_skills: 83
+      d_skills: 256
+      matches:
+        - one:
+          opponent: AIR
+          score: 65
+          o_score: 229
+          alliance: red
+          match: "Qualifier #1"
+        - two:
+          opponent: UMBC
+          score: 80
+          o_score: 116
+          alliance: UMBC
+          match: "Qualifer #4"
+        - three:
+          opponent: GULLS
+          score: 186
+          o_score: 122
+          alliance: blue
+          match: "Qualifier #9"
+        - four:
+          opponent: SKAR
+          score: 99
+          o_score: 80
+          alliance: red
+          match: "Qualifier #11"
+        - five:
+          opponent: NJIT
+          score: 202
+          o_score: 60
+          alliance: blue
+          match: "Qualifier #15"
+        - six:
+          opponent: MASON
+          score: 168
+          o_score: 70
+          alliance: red
+          match: "Qualifier #20"
+        - seven:
+          opponent: NJIT
+          score: 131
+          o_score: 84
+          alliance: red
+          match: "Qualifier #25"
+        - eight:
+          opponent: GULLS
+          score: 163
+          o_score: 110
+          alliance: red
+          match: "Qualifier #28"
+        - nine:
+          opponent: GULLS
+          score: 162
+          o_score: 60
+          alliance: red
+          match: "Quarter Finals #3"
+        - ten:
+          opponent: SKAR
+          score: 93
+          o_score: 153
+          alliance: red
+          match: "Semi Finals #2"

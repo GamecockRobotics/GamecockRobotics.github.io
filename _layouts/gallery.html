@@ -1,1 +1,21 @@
-{% include trifold.html robot=site.data.robots.one %}
+
+<script>
+    var slideIndex = {};
+
+    function plusSlides(gallery, n) {
+        showSlides(gallery, slideIndex[gallery] += n);
+    }
+
+    function showSlides(gallery, n) {
+        let slides = document.getElementsByClassName("robot-slide-" + gallery);
+        if (n > slides.length) { slideIndex[gallery] = 1 }
+        if (n < 1) { slideIndex[gallery] = slides.length }
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex[gallery] - 1].style.display = "block";
+    } 
+</script>
+{% for robot in site.data.robots %}
+    {% include trifold.html robot=robot %}
+{% endfor %}

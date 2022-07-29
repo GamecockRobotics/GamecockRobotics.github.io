@@ -1,67 +1,116 @@
-
+{% assign gallery=gallery | plus: 1 %}
 <style>
-    {%include robot-styles %}
+    .robot-slide-{{ gallery }} {
+        display: none;
+    }
+
+    .prev-{{ gallery }},
+    .next-{{ gallery }} {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .next-{{ gallery }} {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .prev-{{ gallery }}:hover,
+    .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
     .robot-content {
         display: flex;
         flex-direction: row;
     }
+
     .robot-gallery {
         width: 30%;
         float: left;
         background-color: blue;
         position: relative;
     }
+
     .robot-description {
+        min-width: 30%;
         width: 30%;
         float: left;
     }
+
     .robot-statistics {
-        width:30%;
+        min-width: 30%;
         float: left;
     }
+
+    .h_iframe {
+        position: relative;
+    }
+
+    .h_iframe .ratio {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .h_iframe iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 <div>
-    <div>
-        <h1>
-            {{ include.robot.name }}
-        </h1>
-    </div>
     <div class="robot-content">
         <div class="robot-description">
+            <h1>
+                {{ include.robot.name }}
+            </h1>
             {{ include.robot.description }}
         </div>
         <div style="width:5%;"></div>
         <div class="robot-gallery">
             {% for link in include.robot.images %}
-            <div class="robot-slide">
+            <div class="robot-slide-{{gallery}}">
                 <img src="{{link}}" style="max-width:100%;">
             </div>
             {% endfor %}
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            {% for link in include.robot.videos %}
+            <div class="robot-slide-{{gallery}}">
+                <div class="h_iframe">
+                    <img class="ratio" src="/assets/16x9.png" />
+                    <iframe style="width: 100%;" src="{{link}}" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            {% endfor %}
+            <a class="prev-{{gallery}}" onclick="plusSlides({{gallery}}, -1)">&#10094;</a>
+            <a class="next-{{gallery}}" onclick="plusSlides({{gallery}}, 1)">&#10095;</a>
         </div>
         <div style="width:5%;"></div>
-        <div class="statistics">
+        <div class="robot-statistics">
             <h2>Statistics</h2>
+            {% for competition in include.robot.statistics %}
+            {% include scatter.html competition=competition %}
+            {% endfor %}
         </div>
     </div>
 </div>
 
 <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    function showSlides(n) {
-        let slides = document.getElementsByClassName("robot-slide");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slides[slideIndex-1].style.display = "block";
-    } 
+    slideIndex[{{gallery}}] = 1;
+    showSlides({{gallery}}, slideIndex[{{gallery}}]);
 </script>
