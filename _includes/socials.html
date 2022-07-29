@@ -1,0 +1,51 @@
+<style>
+    .social {
+        height:25px;
+        margin-left: 5px;
+    }
+
+    .social img {
+        max-height: 100%;
+    }
+    .socials {
+        display: flex;
+        flex-direction: row;
+    }
+</style>
+<div class="socials">
+    {% if include.accounts.email %}
+        <div class="social">
+            <a href="{{include.accounts.email}}">
+                <img src="/assets/socials/email.png">
+            </a>
+        </div>
+    {% endif %}
+    {% if include.accounts.twitter %}
+        <div class="social">
+            <a href="{{include.accounts.twitter}}">
+                <img src="/assets/socials/twitter.png">
+            </a>
+        </div>
+    {% endif %}
+    {% if include.accounts.linkedin %}
+        <div class="social">
+            <a href="{{include.accounts.linkedin}}">
+                <img src="/assets/socials/linkedin.png">
+            </a>
+        </div>
+    {% endif %}
+    {% if include.accounts.github %}
+        <div class="social">
+            <a href="{{include.accounts.github}}">
+                <img src="/assets/socials/github.png">
+            </a>
+        </div>
+    {% endif %}
+    {% if include.accounts.youtube %}
+        <div class="social">
+            <a href="{{include.accounts.youtube}}">
+                <img src="/assets/socials/youtube.png">
+            </a>
+        </div>
+    {% endif %}
+</div>

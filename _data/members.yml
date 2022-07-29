@@ -1,27 +1,274 @@
+- zero:
+  first: Gamecock
+  last: Robotics
+  professional_description: >-
+    Gamecock Robotics is a VEX U team at the University of South Carolina founded in 2021. The team has competed in VEX
+    Tipping point where they qualified for World's by winning excellence and won the Judges award at the World's
+    competition.
+  image: /assets/profiles/team.jpg
+  socials:
+    github: GamecockRobotics
+    linkedin:
+    twitter: "@GamecockRobotix"
+    youtube: Gamecock Robotics
+    email: sovexu@mailbox.sc.edu
 - one:
   first: Riley
   last: Gleaton
   roles:
     - President
   personal_description: >-
-    A Junior majoring in Physics, Riley enjoys Japanese culture and sweet foods. She also enjoys 
-    board games and making dresses. 
+    A Junior majoring in Physics in the Honors College, Riley enjoys Japanese culture and sweet foods. She also enjoys 
+    board games and making dresses. While very STEM oriented, she is very artistic with a focus on 2D design and poetry.
   professional_description: >-
-    She has done Vex Robotics for 6 years. She has experience as a former team captain of her high
-    school team. Now, Riley manages the club by handling the paperwork and communications with the 
-    university. She also manages the other officers and ensures they are diligent with their workload.
+    She has done Vex Robotics for 6 years and has experience as a former team captain of her high school team. Now, Riley 
+    manages the club by handling the paperwork and communications with the university. She also manages the other officers 
+    and ensures they are diligent with their workload.
   image: /assets/profiles/Riley.jpg
+  socials:
+    github: 
+    linkedin:
+    twitter: 
+    youtube: 
+    email: gleator@email.sc.edu
 - two:
   first: Nathanael
   last: Oliver
   roles:
     - Treasurer
     - Lead Programmer
+    - Web Developer
+    - Wire Manager
   personal_description: >-
-    Nathan is dual majoring in Computer Science and Mathematics. He enjoys outdoor activities like 
+    Nathan is dual majoring in Computer Science and Mathematics in the Honors College. He enjoys outdoor activities like 
     rock climbing and kayaking. He is also an officer and former president of cybersecurity club.
   professional_description: >-
-    He has been doing Vex Robotics for 6 years. He was the team captain of his high school team as well
-    as the lead programmer. Currently, Nathan acts as the treasurer for the club, managing their finances.
-    He also works as the lead programmer for the robots as well as lead web developer for the team.
+    He has been doing Vex Robotics for 6 years. He was the team captain of his high school team as well as the lead 
+    programmer. Currently, Nathan acts as the treasurer for the club, managing their finances. He also works as the lead 
+    programmer for the robots as well as lead web developer for the team. He also wires the robots to ensure the cables 
+    do not get caught and the robot looks clean.
   image: /assets/profiles/Nathan.jpg
+  socials:
+    github: NathanaelOliver
+    linkedin:
+    twitter: 
+    youtube: 
+    email: no2@email.sc.edu
+- three:
+  first: Savannah
+  last: Huffman
+  roles:
+    - Team Captain
+    - Builder
+    - Coach
+    - Notebook
+  personal_description: >-
+    Savannah is majoring in mechanical engineering in the honors college. She is very family oriented and enjoys bringing 
+    her younger sibling to competitions. Savannah enjoys playing games on her switch.
+  professional_description: >-
+    As the most experienced member on the team, Savannah has been doing VEX robotics for 9 years. Savannah manages the 
+    notebook and design process for the team including creating an icredibly detailed scoring analysis each year. She also 
+    coaches the drivers during matches to optimize scoring.
+  image: /assets/profiles/Sav.jpg
+  socials:
+    github: SavHuf 
+    linkedin:
+    twitter: 
+    youtube: 
+    email: sgh4@email.sc.edu
+- four:
+  first: Jake
+  last: Powers
+  roles:
+    - Vice President
+    - Programmer
+  personal_description: >-
+    Jake is a super senior majoring in Computer Information Systems. He enjoys trading card games like Yu-gi-oh and 
+    pok-e-mon. He also likes playing video games. Jake acts like a father figure within the club acting as a calm voice of 
+    reason.
+  professional_description: >-
+    Remaining composed under stressful situations, Jake acts as a natural leader. As Vice President, people can come to him 
+    with issues and he acts as a mediator. Jake also works as a programmer. This is his second year in VEX.
+  image: /assets/profiles/Jake.jpg
+  socials:
+    github: jacobalpowers
+    linkedin:
+    twitter: 
+    youtube: 
+    email: japowers@email.sc.edu
+- five:
+  first: Andi
+  last: MacMurray
+  roles:
+    - Event Coordinator
+    - Programmer
+    - Scout
+  personal_description: >-
+    Andi is a super senior majoring in Computer information systems. He enjoys going to the gym to work out. Andi is a 
+    former hockey player and still enjoys watching the games. He also enjoys a good party and tailgate.
+  professional_description: >-
+    As Event Coordinator, Andi plans trips and events and ensures that the members cooperate to get everything ready for 
+    events. Andi also works as a programmer.  While he is extremely experimental in his approaches to code, Jake is more 
+    cautious making them a great team for pair programming. Andi also works as a scout at competitions where he not only 
+    sees what other teams can do but what their weaknesses are as well.
+  image: /assets/profiles/Andi.jpg
+  socials:
+    github: FrozenDrew
+    linkedin:
+    twitter: 
+    youtube: 
+    email: macmura@email.sc.edu
+- six:
+  first: Pooyan
+  last: Jamishidi
+  roles:
+    - Faculty Advisor
+  personal_description: >-
+    Pooyan is an assistant professor in computer science at UofSC and a visiting researcher at Google. His research involves 
+    contributing theoretical works in Causal AI and Statistical ML and applying them for solving problems in Computer 
+    Systems and a few interdisciplinary areas in sciences and engineering.
+  professional_description: >-
+    Pooyan works as the faculty advisor for the club. He acts as a liason with the rest of the university and the team. 
+    He is extremely interested in AI and excited to work with AI on the VEX system.
+  image: /assets/profiles/Pooyan.jpg
+  socials:
+    github: pooyanjamishidi
+    linkedin: https://www.linkedin.com/in/pooyanjamshidi
+    twitter: "@PooyanJamshidi"
+    youtube: https://www.youtube.com/channel/UCpWgqip1gn6P8JU_w3a1KCA
+    email: pjamshid@cse.sc.edu
+- seven:
+  first: Raymond
+  last: Jedlicka
+  roles:
+    - Builder
+    - Driver
+  personal_description: >-
+    Ray is a sophomore majoring in IT. Ray enjoys playing video games with his friends including games in VR. He also enjoys
+    heavy metal music.
+  professional_description: >-
+    Ray has done Robotics for 7 years. He was a former member of CATS where he worked as a builder. He is very knowledgeable
+    about additive and subtractive engineering and researches potential tools for the club including 3D printers, CNC 
+    machines and Laser cutters. Ray is also the teams Pneumatics expert and manages all of the valves and fittings. He also 
+    does CAD for the team to create new and powerful robot designs. Ray also acts as a driver for the team.
+  image: /assets/profiles/Ray.jpg
+  socials:
+    github:
+    linkedin:
+    twitter: 
+    youtube: 
+    email: jedlickr@email.sc.edu
+- eight:
+  first: Tommy
+  last: Pinckney
+  roles:
+    - Builder
+    - Plug
+    - Driver
+  personal_description: >-
+    Tommy is a Junior majoring in Mechanical Engineering. He is an eagle scout and likes to say "Howdy!" Tommy's hair though
+    not styled always has a unique and suave flow. He also works at Lowe's where he can get the team a discount on tools 
+    storage containers.
+  professional_description: >-
+    Tommy has been doing VEX for 7 years. He is a former member of 7432E. He works as a builder for the team and is an 
+    expert at getting to hard to reach screws and dealing with stripped screws. Tommy is also an out of the box thinker and 
+    will often create unique designs. He also works as a Driver and will occasionally dual drive with Ray.
+  image: /assets/profiles/Tommy.jpg
+  socials:
+    github:
+    linkedin:
+    twitter: 
+    youtube: 
+    email: tdp1@email.sc.edu
+- nine:
+  first: Guytano
+  last: Mancine
+  roles:
+    - Lead Builder
+    - Driver
+  personal_description: >-
+    Guytano is a Junior film major. He is also an eagle scout and was in the same troop as Tommy. He is Tik Tok famous and 
+    looking for an emo girl. 
+  professional_description: >-
+    Tied for longest time in VEX Guy has competed for 9 years. He is the former co-captain of 7432E and is very involved in 
+    the VEX community. He is also an excellent driver at competitions.
+  image: /assets/profiles/Guy.jpg
+  socials:
+    github:
+    linkedin:
+    twitter: 
+    youtube: 
+    email: gmancine@email.sc.edu
+- ten:
+  first: Mia
+  last: Dia
+  roles:
+    - Builder
+    - Filmer
+  personal_description: >-
+    Mia is a Junior majoring in Computer Science. She is also the secretary of the board game club on campus. 
+  professional_description: >-
+    Mia has been doing VEX for 4 years. She works as a builder for the team. At competitions she also films matches giving 
+    us excellent footage to review so that we can improve in the future.
+  image: /assets/profiles/Mia.jpg
+  socials:
+    github: MZDia
+    linkedin:
+    twitter: 
+    youtube: 
+    email: mzdia@email.sc.edu
+- eleven:
+  first: Naveen
+  last: Chithan
+  roles:
+    - Programmer
+  personal_description: >-
+    Naveen is a Junior majoring in Computer Science in the honors college. He is a third degree black belt in tae-kwon-do
+    and teaches classes. Though very formidable in a fight, he is too scared to ask out his crush. He is also the treasurer 
+    of Cybersecurity Club.
+  professional_description: >-
+    Naveen has been doing VEX Robotics for 4 years. He works as a programmmer and is so dedicated to his work he 
+    accidentally hospitalized himself from overworking.
+  image: /assets/profiles/Naveen.jpg
+  socials:
+    github: nchithan
+    linkedin:
+    twitter: 
+    youtube: 
+    email: nchithan@email.sc.edu
+- twelve:
+  first: Jessie
+  last: Taylor
+  roles:
+    - Social Media Manager
+  personal_description: >-
+    Jessie is an Art major who enjoys spending hours putting on makeup before going to the mall. Her fun and quirky nature 
+    contributes to the good nature of the team.
+  professional_description: >- 
+    This is Jessie's second year doing robotics. She works on the social media for the team.
+  image: /assets/profiles/Jessie.jpg
+  socials:
+    github: 
+    linkedin:
+    twitter: 
+    youtube: 
+    email: jftaylor@email.sc.edu
+- thirteen:
+  first: Robot
+  last: Will
+  roles:
+    - builder
+  personal_description: >-
+    Will is a freshman majoring in Mechanical Engineering. He attends Midlands Technical College but plans to transfer to 
+    the Univesity of South Carolina within the next two years.
+  professional_description: >-
+    Will has competed in Robotics since High School where he was first a member of Riverbluff High School before starting 
+    his own team. He worked as the main builder and programmer and most notably created the original Shopping Cart in 
+    Tipping point.
+  image: /assets/profiles/Will.jpg
+  socials:
+    github:
+    linkedin:
+    twitter: 
+    youtube: 
+    email:
