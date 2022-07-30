@@ -4,7 +4,7 @@
   images: 
     - "/assets/profiles/Riley.jpg"
     - "/assets/profiles/Nathan.jpg"
-  link:
+  videos:
     - "https://www.youtube.com/embed/wIZgvVDZc2Y"
   statistics:
     - one:

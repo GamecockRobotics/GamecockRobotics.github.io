@@ -4,6 +4,12 @@
         display: none;
     }
 
+    .robot-slide-img img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
     .prev-{{ gallery }},
     .next-{{ gallery }} {
         cursor: pointer;
@@ -33,6 +39,7 @@
     .robot-content {
         display: flex;
         flex-direction: row;
+        margin-top: 30px;
     }
 
     .robot-gallery {
@@ -44,17 +51,27 @@
 
     .robot-description {
         min-width: 30%;
+        max-width: 30%;
         width: 30%;
+        height: auto;
         float: left;
+    }
+    .text {
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .robot-statistics {
         min-width: 30%;
+        max-width:30%;
         float: left;
     }
 
     .h_iframe {
-        position: relative;
+        position: absolute;
+        height: max-content;
+        top: 50%;
+        transform: translateY(-50%);
     }
 
     .h_iframe .ratio {
@@ -70,43 +87,79 @@
         width: 100%;
         height: 100%;
     }
+
+    @media (max-width: 750px) {
+        .robot-content {
+            flex-direction: column;
+        }
+
+        .robot-description, .robot-statistics {
+            min-width: 100%;
+            max-width:100%;
+            width: 100%;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .robot-gallery {
+            margin-left: 5%;
+            margin-right: 5%;
+            width: 90%;
+        }
+        .robot-slide-img img {
+        position: static;
+        top: 0%;
+        transform: translateY(0%);
+    }
+    .h_iframe {
+        position: static;
+        top: 0%;
+        transform: translateY(0%);
+    }
+    }
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-<div>
-    <div class="robot-content">
-        <div class="robot-description">
-            <h1>
-                {{ include.robot.name }}
-            </h1>
-            {{ include.robot.description }}
+<div class="robot-content">
+    <div class="robot-description">
+        <div class="text">
+        <h1>
+            {{ include.robot.name }}
+        </h1>
+        {{ include.robot.description }}
         </div>
-        <div style="width:5%;"></div>
-        <div class="robot-gallery">
-            {% for link in include.robot.images %}
-            <div class="robot-slide-{{gallery}}">
-                <img src="{{link}}" style="max-width:100%;">
+    </div>
+    <div style="max-width:5%;min-width: 5%;"></div>
+    <div class="robot-gallery">
+        {% for link in include.robot.images %}
+        <div class="robot-slide-{{gallery}}">
+            <div class="robot-slide-img">
+            <img src="{{link}}" style="max-width:100%;">
             </div>
-            {% endfor %}
-            {% for link in include.robot.videos %}
-            <div class="robot-slide-{{gallery}}">
-                <div class="h_iframe">
-                    <img class="ratio" src="/assets/16x9.png" />
-                    <iframe style="width: 100%;" src="{{link}}" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-            </div>
-            {% endfor %}
-            <a class="prev-{{gallery}}" onclick="plusSlides({{gallery}}, -1)">&#10094;</a>
-            <a class="next-{{gallery}}" onclick="plusSlides({{gallery}}, 1)">&#10095;</a>
         </div>
-        <div style="width:5%;"></div>
-        <div class="robot-statistics">
-            <h2>Statistics</h2>
-            {% for competition in include.robot.statistics %}
+        {% endfor %}
+        {% for link in include.robot.videos %}
+        <div class="robot-slide-{{gallery}}">
+            <div class="h_iframe">
+                <img class="ratio" src="/assets/16x9.png" />
+                <iframe style="width: 100%;" src="{{link}}" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+        {% endfor %}
+        <a class="prev-{{gallery}}" onclick="plusSlides({{gallery}}, -1)">&#10094;</a>
+        <a class="next-{{gallery}}" onclick="plusSlides({{gallery}}, 1)">&#10095;</a>
+    </div>
+    <div style="max-width:5%;min-width: 5%;"></div>
+    <div class="robot-statistics">
+        <h2>Statistics</h2>
+        {% for competition in include.robot.statistics %}
+            <h3>{{ competition.competition }}</h3>
+            {% include record.html competition=competition%}
+            </div>
+            <h4>Matches</h4>
             {% include scatter.html competition=competition %}
-            {% endfor %}
-        </div>
+        {% endfor %}
     </div>
 </div>
 

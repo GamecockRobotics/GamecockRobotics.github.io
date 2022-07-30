@@ -1,4 +1,4 @@
-
+{% include header.html %}
 <script>
     var slideIndex = {};
 
@@ -19,3 +19,4 @@
 {% for robot in site.data.robots %}
     {% include trifold.html robot=robot %}
 {% endfor %}
+{% include footer.html %}

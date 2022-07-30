@@ -1,15 +1,31 @@
 <style>
+    .sponsor {
+        display: flex;
+        flex-direction: row;
+    }
     .footer {
         margin: 0px 0px;
         background-color: {{site.data.theme.primary}};
         min-height: 300px;
+    }
+    .footer a, .footer p, .footer ul li, .footer ol li, .footer h1, .footer h2, .footer h3, .footer h4, .footer h5, .footer h6 {
+        padding-top: 50px;
+        margin-left: 100px;
+        color: {{ site.data.theme.on_primary }};
         
     }
-    .footer a, p, ul li, ol li, h1, h2, h3, h4, h5, h6 {
-        color: {{ site.data.theme.on_primary }};
+    .footer img {
+        margin-top: 25px;
+        margin-left: 10%;
+        height: 100px;
     }
 </style>
 <div class="footer">
-    
-<p>stuff written here</p>
+    <h2> Sponsors</h2>
+    <div class="sponsors">
+        {% for sponsor in site.data.sponsors %}
+            <img src="{{sponsor.logo}}">
+        {% endfor %}
+    </div>
+
 </div>
