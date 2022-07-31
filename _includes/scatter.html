@@ -1,10 +1,8 @@
-<canvas id="{{ include.competition.competition }}" style="max-width: 90%; height: 100%; min-height: 250px;"></canvas>
-
+<canvas id="{{ include.competition.competition }}" style="width: 100%;height:100%;"></canvas>
 <script>
-    {% assign counter=0 %}
+
     var xValues = [
     {% for match in include.competition.matches %}
-        {% assign counter = counter | plus: 1 %}
         "{{ match.match }}",
     {% endfor %}];
     var scores = [
@@ -41,7 +39,9 @@
       type: "line",
       data: {
         labels: xValues,
-        datasets: [{
+        datasets: [
+        
+        {
             label: "Scores",
             fill: false,
             backgroundColor: "rgba(0,0,255,1.0)",
@@ -74,7 +74,7 @@
       },
       options: {
         legend: {
-            display: true,
+            display: false,
             position: "bottom",
         },
         scales: {
@@ -82,4 +82,4 @@
         }
       }
     });
-    </script>
+</script>

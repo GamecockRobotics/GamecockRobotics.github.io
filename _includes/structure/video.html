@@ -1,0 +1,29 @@
+<style>
+    .h_iframe {
+        position: relative;
+    }
+
+    .h_iframe .ratio {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .h_iframe iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .h_iframe ratio iframe {
+        width: 100%;
+    }
+</style>
+<div class="h_iframe">
+    <img class="ratio" src="/assets/16x9.png" />
+    <iframe src="{{ include.link }}" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+</div>

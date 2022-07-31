@@ -67,6 +67,24 @@
         float: left;
     }
 
+    .s_iframe {
+        position: absolute;
+    }
+
+    .s_iframe .ratio {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .s_iframe canvas {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
     .h_iframe {
         position: absolute;
         height: max-content;
@@ -158,7 +176,11 @@
             {% include record.html competition=competition%}
             </div>
             <h4>Matches</h4>
-            {% include scatter.html competition=competition %}
+
+            <div class="s_iframe">
+                <img class="ratio" src="/assets/16x9.png">
+                {% include scatter.html competition=competition %}
+            </div>
         {% endfor %}
     </div>
 </div>

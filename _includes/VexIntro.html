@@ -10,31 +10,6 @@
         border: 4px solid {{site.data.theme.neutral1}};
     }
 
-    .aside p,
-    .aside h1,
-    .aside h2,
-    .aside h3 {
-        color: {{site.data.theme.on_background}};
-    }
-
-    .h_iframe {
-        position: relative;
-    }
-
-    .h_iframe .ratio {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-
-    .h_iframe iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
     @media (max-width: 1000px) {
         .aside {
             margin-left: 120px;
@@ -72,11 +47,6 @@
         </p>
     </div>
     <div class="video">
-        <div class="h_iframe">
-            <img class="ratio" src="/assets/16x9.png" />
-            <iframe style="width: 100%;" src="https://www.youtube.com/embed/wIZgvVDZc2Y" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </div>
+        {% include structure/video.html link="https://www.youtube.com/embed/wIZgvVDZc2Y" %}
     </div>
 </div>
