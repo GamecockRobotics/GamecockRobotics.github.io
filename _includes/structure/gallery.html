@@ -1,0 +1,28 @@
+<!--
+Parameters:
+    include.imgs
+    include.videos
+    include.auto_scroll
+-->
+{% assign gallery=gallery | plus: 1 %}
+<div class="gallery-{{gallery}}">
+    {% for link in include.imgs %}
+    <div class="gallery-slide-{{gallery}}">
+        <div class="gallery-slide-img">
+        <img src="{{link}}" style="max-width:100%;">
+        </div>
+    </div>
+    {% endfor %}
+    {% for link in include.videos %}
+    <div class="gallery-slide-{{gallery}}">
+        {% include structure/video.html src=link %}
+    </div>
+    {% endfor %}
+    <a class="prev-{{gallery}}" onclick="plusSlides({{gallery}}, -1)">&#10094;</a>
+    <a class="next-{{gallery}}" onclick="plusSlides({{gallery}}, 1)">&#10095;</a>
+</div>
+
+<script>
+    slideIndex[{{gallery}}] = 1;
+    showSlides({{gallery}}, slideIndex[{{gallery}}]);
+</script>

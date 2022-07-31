@@ -1,5 +1,8 @@
 {% assign gallery=gallery | plus: 1 %}
 <style>
+    .competition-scatter {
+        width:90%;
+    }
     .robot-slide-{{ gallery }} {
         display: none;
     }
@@ -157,12 +160,7 @@
         {% endfor %}
         {% for link in include.robot.videos %}
         <div class="robot-slide-{{gallery}}">
-            <div class="h_iframe">
-                <img class="ratio" src="/assets/16x9.png" />
-                <iframe style="width: 100%;" src="{{link}}" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
+            {% include structure/video.html src=link %}
         </div>
         {% endfor %}
         <a class="prev-{{gallery}}" onclick="plusSlides({{gallery}}, -1)">&#10094;</a>
@@ -176,10 +174,8 @@
             {% include record.html competition=competition%}
             </div>
             <h4>Matches</h4>
-
-            <div class="s_iframe">
-                <img class="ratio" src="/assets/16x9.png">
-                {% include scatter.html competition=competition %}
+            <div class="competition-scatter">
+                {% include adapter/competition-scatter.html competition=competition %}
             </div>
         {% endfor %}
     </div>

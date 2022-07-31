@@ -11,7 +11,7 @@
     }
 
     .main p, .main h1, .main h2, .main h3 {
-        color: #000;
+        color: {{ site.data.theme.on_background }};
     }
 
     .sidebar {
@@ -43,7 +43,7 @@
     <div class="content">
         <div class="main">
             {% for profile in site.data.members %}
-            {% include Profile.html member=profile %}
+                {% include Profile.html member=profile %}
             {% endfor %}
         </div>
         <div class="sidebar">
@@ -52,15 +52,3 @@
     </div>
     {% include Footer.html %}
 </body>
-<!--
-    ---
-    TO DO
-    ---
-    Aside
-     - Vertical > 1000
-     - Vertical < 500
-     - border < 500
-     - Horizontal < 1000 & > 500
-     - small margin < 500
-     - large margin < 1000 & > 500
--->

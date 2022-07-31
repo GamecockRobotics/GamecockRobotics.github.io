@@ -1,0 +1,61 @@
+{% assign data = "" %}
+
+{% for match in include.competition.matches %}
+    {% assign data=data | append: '"' | append: match.match %}
+    {% if forloop.last %}
+        {% assign data=data | append: '";' %}
+    {% else %}
+        {% assign data=data | append: '",' %}
+    {% endif %}
+{% endfor %}
+
+{% for match in include.competition.matches %}
+    {% assign data=data | append: match.score %}
+    {% if forloop.last %}
+        {% assign data=data | append: ';' %}
+    {% else %}
+        {% assign data=data | append: ',' %}
+    {% endif %}
+{% endfor %}
+
+{% for match in include.competition.matches %}
+    {% assign data=data | append: match.o_score%}
+    {% if forloop.last %}
+        {% assign data=data | append: ';' %}
+    {% else %}
+        {% assign data=data | append: ',' %}
+    {% endif %}
+{% endfor %}
+
+{% for num in include.competition.matches %}
+    {% assign data=data | append: include.competition.a_skills %}
+    {% if forloop.last %}
+        {% assign data=data | append: ';' %}
+    {% else %}
+        {% assign data=data | append: ',' %}
+    {% endif %}
+{% endfor %}
+
+{% for num in include.competition.matches %}
+    {% assign data=data | append: include.competition.d_skills %}
+    {% if forloop.last %}
+        {% assign data=data | append: ';' %}
+    {% else %}
+        {% assign data=data | append: ',' %}
+    {% endif %}
+{% endfor %}
+
+
+{% assign max=include.competition.d_skills %}
+{% if include.competition.a_skills > max %}
+    {% assign max=include.competition.a_skills %}
+{% endif %}
+{% for match in include.competition.matches %}
+    {% if match.score > max %}
+        {% assign max=match.score %}
+    {% endif %}
+{% endfor %}
+
+{% assign max=max | plus: 25 | divided_by: 50 | round | times: 50 %}
+
+{% include structure/scatter.html name=include.competition.competition lists=data min=0 max=max %}
