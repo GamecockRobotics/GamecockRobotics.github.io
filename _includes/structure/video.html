@@ -1,15 +1,15 @@
 <style>
-    .h_iframe {
+    .vid-wrapper {
         position: relative;
     }
 
-    .h_iframe .ratio {
+    .vid-wrapper .ratio {
         display: block;
         width: 100%;
         height: auto;
     }
 
-    .h_iframe iframe {
+    .vid-wrapper iframe {
         position: absolute;
         top: 0;
         left: 0;
@@ -17,7 +17,7 @@
         height: 100%;
     }
 </style>
-<div class="h_iframe">
+<div class="vid-wrapper">
     <img class="ratio" src="/assets/16x9.png" />
     <iframe src="{{ include.src }}" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

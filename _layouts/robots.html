@@ -7,7 +7,7 @@
     }
 
     function showSlides(gallery, n) {
-        let slides = document.getElementsByClassName("robot-slide-" + gallery);
+        let slides = document.getElementsByClassName("gallery"+gallery+"-slide");
         if (n > slides.length) { slideIndex[gallery] = 1 }
         if (n < 1) { slideIndex[gallery] = slides.length }
         for (let i = 0; i < slides.length; i++) {

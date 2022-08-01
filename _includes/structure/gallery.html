@@ -1,25 +1,75 @@
-<!--
-Parameters:
-    include.imgs
-    include.videos
-    include.auto_scroll
--->
 {% assign gallery=gallery | plus: 1 %}
-<div class="gallery-{{gallery}}">
+
+<style>
+    .gallery {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .gallery{{ gallery }}-slide {
+        display: none;
+        min-width: 100%;
+    }
+
+    .gallery-slide-img {
+        min-width: 100%;
+    }
+
+    .gallery-slide-img img {
+        min-width: 100%;
+    }
+
+    .gallery{{gallery}}-slide .video {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    
+
+    .gallery{{ gallery }}-prev,
+    .gallery{{ gallery }}-next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        padding: 16px;
+        color: white;
+        font-weight: bold;
+        font-size: 20px;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+        -webkit-user-select: none;
+    }
+
+    .gallery{{ gallery }}-next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+    }
+
+    .gallery{{ gallery }}-prev:hover,
+    .gallery{{ gallery }}-next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+</style>
+<div class="gallery">
     {% for link in include.imgs %}
-    <div class="gallery-slide-{{gallery}}">
+    <div class="gallery{{gallery}}-slide">
         <div class="gallery-slide-img">
-        <img src="{{link}}" style="max-width:100%;">
+            <img src="{{link}}" style="max-width:100%; min-width: 100%;">
         </div>
     </div>
     {% endfor %}
     {% for link in include.videos %}
-    <div class="gallery-slide-{{gallery}}">
+    <div class="gallery{{gallery}}-slide">
+        <div class="video">
         {% include structure/video.html src=link %}
+        </div>
     </div>
     {% endfor %}
-    <a class="prev-{{gallery}}" onclick="plusSlides({{gallery}}, -1)">&#10094;</a>
-    <a class="next-{{gallery}}" onclick="plusSlides({{gallery}}, 1)">&#10095;</a>
+    <a class="gallery{{gallery}}-prev" onclick="plusSlides({{gallery}}, -1)">&#10094;</a>
+    <a class="gallery{{gallery}}-next" onclick="plusSlides({{gallery}}, 1)">&#10095;</a>
 </div>
 
 <script>

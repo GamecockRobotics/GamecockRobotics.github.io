@@ -1,4 +1,4 @@
 ---
-layout: gallery
+layout: robots
 title: "Retired Bots"
 ---

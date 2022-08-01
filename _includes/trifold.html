@@ -1,42 +1,6 @@
-{% assign gallery=gallery | plus: 1 %}
 <style>
     .competition-scatter {
-        width:90%;
-    }
-    .robot-slide-{{ gallery }} {
-        display: none;
-    }
-
-    .robot-slide-img img {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .prev-{{ gallery }},
-    .next-{{ gallery }} {
-        cursor: pointer;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        width: auto;
-        padding: 16px;
-        color: white;
-        font-weight: bold;
-        font-size: 20px;
-        border-radius: 0 3px 3px 0;
-        user-select: none;
-        -webkit-user-select: none;
-    }
-
-    .next-{{ gallery }} {
-        right: 0;
-        border-radius: 3px 0 0 3px;
-    }
-
-    .prev-{{ gallery }}:hover,
-    .next:hover {
-        background-color: rgba(0, 0, 0, 0.8);
+        width: 90%;
     }
 
     .robot-content {
@@ -70,45 +34,6 @@
         float: left;
     }
 
-    .s_iframe {
-        position: absolute;
-    }
-
-    .s_iframe .ratio {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-
-    .s_iframe canvas {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
-    .h_iframe {
-        position: absolute;
-        height: max-content;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    .h_iframe .ratio {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
-
-    .h_iframe iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
-
     @media (max-width: 750px) {
         .robot-content {
             flex-direction: column;
@@ -127,16 +52,6 @@
             margin-right: 5%;
             width: 90%;
         }
-        .robot-slide-img img {
-        position: static;
-        top: 0%;
-        transform: translateY(0%);
-    }
-    .h_iframe {
-        position: static;
-        top: 0%;
-        transform: translateY(0%);
-    }
     }
 </style>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
@@ -151,20 +66,7 @@
     </div>
     <div style="max-width:5%;min-width: 5%;"></div>
     <div class="robot-gallery">
-        {% for link in include.robot.images %}
-        <div class="robot-slide-{{gallery}}">
-            <div class="robot-slide-img">
-            <img src="{{link}}" style="max-width:100%;">
-            </div>
-        </div>
-        {% endfor %}
-        {% for link in include.robot.videos %}
-        <div class="robot-slide-{{gallery}}">
-            {% include structure/video.html src=link %}
-        </div>
-        {% endfor %}
-        <a class="prev-{{gallery}}" onclick="plusSlides({{gallery}}, -1)">&#10094;</a>
-        <a class="next-{{gallery}}" onclick="plusSlides({{gallery}}, 1)">&#10095;</a>
+        {% include structure/gallery.html imgs= include.robot.images videos=include.robot.videos %}
     </div>
     <div style="max-width:5%;min-width: 5%;"></div>
     <div class="robot-statistics">
