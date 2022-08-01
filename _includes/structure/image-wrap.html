@@ -1,5 +1,5 @@
 <style>
-    .profile {
+    .image-wrapper {
         padding-left: 100px;
         padding-right: 20px;
         padding-bottom: 20px;
@@ -8,69 +8,60 @@
         background-color: {{ site.data.theme.background }};
     }
 
-    .profile:after {
+    .image-wrapper:after {
         content: "";
         display: table;
         clear: both;
     }
 
-    .profile p {
+    .image-wrapper p, .image-wrapper h1, .image-wrapper h2 {
         color: {{site.data.theme.on_background}};
     }
 
-    .profile h1 {
-        color: {{site.data.theme.on_background}};
-    }
-
-    .profile h2 {
-        color: {{site.data.theme.on_background}};
-    }
-
-    .member-info {
+    .text-wrap {
         float: left;
         max-width: 60%;
         margin-left: 20px;
         margin-right: 20px;
     }
 
-    .profile:nth-of-type(even) .member-info {
+    .image-wrapper:nth-of-type(even) .text-wrap {
         order:2;
     }
-    .profile:nth-of-type(odd) .member-info {
+    .image-wrapper:nth-of-type(odd) .text-wrap {
         order:1;
     }
-    .profile:nth-of-type(even) .profile-pic {
+    .image-wrapper:nth-of-type(even) .wrapped-image {
         order:1;
     }
-    .profile:nth-of-type(odd) .profile-pic {
+    .image-wrapper:nth-of-type(odd) .wrapped-image {
         order:2;
     }
 
-    .profile-pic {
+    .wrapped-image {
         margin-top: 20px;
         float: right;
         width: 40%;
     }
 
-    .profile-pic img {
+    .wrapped-image img {
         max-width: 100%;
         max-height: 350px;
     }
 
-
     @media (max-width: 600px) {
-        .profile {
+        .image-wrapper {
             flex-direction: column;
             padding-left: 20px;
             padding-right: 20px;
         }
-        .member-info {
+        .text-wrap {
             order: 2 !important;
             min-width: 100%;
             margin-left: 0px;
         }
 
-        .profile-pic {
+        .wrapped-image {
             order: 1 !important;
             width: 90%;
             float: left;
@@ -79,20 +70,15 @@
     }
 </style>
 
-<div class="profile">
-    <div class="member-info">
-        <h1>{{ include.member.first }} {{ include.member.last }}</h1>
-        <h2>
-            {% for role in include.member.roles %}
-                ——{{role}}
-            {% endfor %}
-        </h2>
-        {% include socials.html accounts=include.member.socials %}
-        
-        <p>{{ include.member.personal_description }}</p>
-        <p>{{ include.member.professional_description }}</p>
+<div class="image-wrapper">
+    <div class="text-wrap">
+        <h1>{{ include.title }}</h1>
+        <h2>{{ include.subtitle }}</h2>
+        {% include structure/socials.html accounts=include.socials %}
+        <p>{{ include.first_paragraph }}</p>
+        <p>{{ include.second_paragraph }}</p>
     </div>
-    <div class="profile-pic">
-        <img src={{include.member.image}}>
+    <div class="wrapped-image">
+        <img src={{include.image}}>
     </div>
 </div>

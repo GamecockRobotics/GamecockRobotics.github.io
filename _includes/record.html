@@ -13,7 +13,7 @@
     {% endif %}
     {% assign total = 1.0 | plus: total %}
 {% endfor %}
-<div style="height:15px; width:90%;display: flex;flex-direction: row; margin-left:5%;">
+<div style="height:15px; width:90%;display: flex;flex-direction: row;">
 <div style="height:15px;background-color:green;width:{{win | divided_by: total | times: 100}}%;"></div>
 <div style="height:15px;background-color:yellow;width:{{tie | divided_by: total | times: 100}}%;"></div>
 <div style="height:15px;background-color:red;width:{{loss | divided_by: total | times: 100}}%;"></div>

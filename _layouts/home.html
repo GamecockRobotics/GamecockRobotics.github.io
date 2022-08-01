@@ -43,11 +43,11 @@
     <div class="content">
         <div class="main">
             {% for profile in site.data.members %}
-                {% include Profile.html member=profile %}
+                {% include adapter/profile.html member=profile %}
             {% endfor %}
         </div>
         <div class="sidebar">
-            {% include VexIntro.html %}
+            {% include vex-intro.html %}
         </div>
     </div>
     {% include Footer.html %}
