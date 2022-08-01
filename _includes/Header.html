@@ -20,11 +20,6 @@
       color: {{site.data.theme.on_primary}};
   }
 
-  .tab {
-    display: inline-block;
-    margin-left: 40px;
-  }
-
   .navbar a {
     font-size: 24;
     text-decoration: none;
@@ -42,7 +37,7 @@
   {% assign pages = site.pages | where_exp: 'page', 'page.url contains "_pages"' %}
   {% for page in pages %}
     <a href="{{page.url}}">{{page.title}}</a>
-    <span class="tab"></span>
+    <span style="display: inline-block; width: 40px;"></span>
   {% endfor %}
 </div>
 </div>
