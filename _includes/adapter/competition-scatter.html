@@ -58,4 +58,6 @@
 
 {% assign max=max | plus: 25 | divided_by: 50 | round | times: 50 %}
 
-{% include structure/scatter.html name=include.competition.competition lists=data min=0 max=max %}
+{% assign settings='"scores":"rgba(0,0,255,1.0)":4;"opponent scores":"rgba(0,255,0,1.0)":4;"driver skills":"rgba(255,0,0,1.0)":1;"autonomous skills":"rgba(255,0,255,1.0)":1'%}
+
+{% include structure/scatter.html name=include.competition.competition lists=data settings=settings min=0 max=max %}
