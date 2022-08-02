@@ -223,12 +223,9 @@
   roles:
     - Programmer
   personal_description: >-
-    Naveen is a Junior majoring in Computer Science in the honors college. He is a third degree black belt in tae-kwon-do
-    and teaches classes. Though very formidable in a fight, he is too scared to ask out his crush. He is also the treasurer 
-    of Cybersecurity Club.
+    Naveen is a Junior majoring in Computer Science in the honors college. He is also the treasurer of Cybersecurity Club. 
   professional_description: >-
-    Naveen has been doing VEX Robotics for 4 years. He works as a programmmer and is so dedicated to his work he 
-    accidentally hospitalized himself from overworking.
+    Naveen has been doing VEX Robotics for 4 years. He works as a programmmer for the robots. 
   image: /assets/profiles/Naveen.jpg
   socials:
     github: nchithan
