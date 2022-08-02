@@ -5,7 +5,7 @@
     - "/assets/profiles/Riley.jpg"
     - "/assets/profiles/Nathan.jpg"
   videos:
-    - "https://www.youtube.com/embed/wIZgvVDZc2Y"
+    - "wIZgvVDZc2Y"
   statistics:
     - one:
       competition: Tigertown Throwdown

@@ -55,31 +55,31 @@
     type: "line",
     data: {
       labels: [{{ xValues }}],
-    datasets: [
-      {% for datum in lists %}
-        {% unless forloop.first %}
-    {% assign index = forloop.index | minus: 2 %}
-    {% assign setting = settings[index] | split: ":" %}
-    {
-      label: {{ setting[0]}},
-    fill: false,
-    backgroundColor: {{ setting[1]}},
-    borderColor: {{ setting[1]}},
-    pointRadius: {{ setting[2]}},
-    data: [{{ datum }}]
-        },
-    {% endunless %}
-    {% endfor %}]
-      },
-    options: {
-    legend: {
-      display: false,
-      position: "bottom",
+      datasets: [
+        {% for datum in lists %}
+          {% unless forloop.first %}
+            {% assign index = forloop.index | minus: 2 %}
+            {% assign setting = settings[index] | split: ":" %}
+            {
+              label: {{ setting[0]}},
+              fill: false,
+              backgroundColor: {{ setting[1]}},
+              borderColor: {{ setting[1]}},
+              pointRadius: {{ setting[2]}},
+              data: [{{ datum }}]
+            },
+          {% endunless %}
+        {% endfor %}
+      ]
     },
-    scales: {
-      yAxes: [{ ticks: { min: 0, max: {{ include.max }}
-  }}],
-        }
+    options: {
+      legend: {
+        display: false,
+        position: "bottom",
+      },
+      scales: {
+        yAxes: [{ ticks: { min: 0, max: {{ include.max }}}}],
       }
-    });
+    }
+  });
 </script>
