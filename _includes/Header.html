@@ -13,7 +13,7 @@
   .navbar {
       position: sticky;
       top: 0px;
-      height: 75px;
+      height: 60px;
       padding: 4px 16px;
       z-index: +1;
       background: {{site.data.theme.primary}};
@@ -23,8 +23,16 @@
   .navbar a {
     font-size: 24;
     text-decoration: none;
+    display: block;
+    padding: 14px 16px;
+    float: left;
     color: {{site.data.theme.on_primary}};
   }
+
+  .navbar a:hover {
+    background-color: {{site.data.theme.primary_dark}};
+  }
+
   .centered {
     position: absolute;
     top: 50%;

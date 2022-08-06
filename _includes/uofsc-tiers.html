@@ -1,0 +1,130 @@
+<style>
+    .aside {
+        float: left;
+        top: 85px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 5px 5px;
+
+        border: 4px solid {
+                {
+                site.data.theme.neutral1
+            }
+        }
+
+        ;
+    }
+
+    @media (max-width: 1000px) {
+        .aside {
+            margin-left: 120px;
+            border: none;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .title {
+            margin-right: 20px;
+        }
+
+        .video {
+            min-width: 250px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .aside {
+            margin-left: 20px;
+            flex-direction: column;
+        }
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        border: 1px solid #e7e7e7;
+        background-color: #f3f3f3;
+    }
+
+    li {
+        float: left;
+    }
+
+    li p {
+        display: block;
+        color: #666;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    li p:hover:not(.active) {
+        background-color: #ddd;
+    }
+
+    li p.active {
+        color: white;
+        background-color: #04AA6D;
+    }
+    #tier2 {
+    display: none;
+  }
+  #tier3 {
+    display: none;
+  }
+</style>
+<div class="aside">
+  <div class="title">
+    <h1>Tiers</h1>
+  </div>
+  <div class="tier-buttons">
+    <ul>
+      <li>
+        <p class="notactive" id="tier1button" onclick="activeTier1()">Tier 1</p>
+      </li>
+      <li>
+        <p class="notactive" id="tier2button" onclick="activeTier2()">Tier 2</p>
+      </li>
+      <li>
+        <p class="notactive" id="tier3button" onclick="activeTier3()">Tier 3</p>
+      </li>
+    </ul>
+  </div>
+  <div id="tier1">
+    <p>Blah Blah Blah1</p>
+    <p>Blah Blah Blah1</p>
+    <p>Blah Blah Blah1</p>
+  </div>
+  <div id="tier2">
+    <p>Blah Blah Blah2</p>
+    <p>Blah Blah Blah2</p>
+    <p>Blah Blah Blah2</p>
+  </div>
+  <div id="tier3">
+    <p>Blah Blah Blah3</p>
+    <p>Blah Blah Blah3</p>
+    <p>Blah Blah Blah3</p>
+  </div>
+</div>
+
+<script>
+  function activeTier1() {
+    document.getElementById("tier1").style.display = "block";
+    document.getElementById("tier2").style.display = "none";
+    document.getElementById("tier3").style.display = "none";
+  }
+  function activeTier2() {
+    document.getElementById("tier1").style.display = "none";
+    document.getElementById("tier2").style.display = "block";
+    document.getElementById("tier3").style.display = "none";
+  }
+  function activeTier3() {
+    document.getElementById("tier1").style.display = "none";
+    document.getElementById("tier2").style.display = "none";
+    document.getElementById("tier3").style.display = "block";
+  }
+</script>
