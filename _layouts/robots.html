@@ -16,7 +16,7 @@
         slides[slideIndex[gallery] - 1].style.display = "block";
     } 
 </script>
-{% for robot in site.data.robots %}
+{% for robot in site.data.robots reversed %}
     {% include trifold.html robot=robot %}
 {% endfor %}
 {% include footer.html %}

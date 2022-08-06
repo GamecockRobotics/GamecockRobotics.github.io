@@ -61,7 +61,7 @@
     <div style="max-width:5%;min-width: 5%;"></div>
     <div class="robot-statistics">
         <h2>Statistics</h2>
-        {% for competition in include.robot.statistics %}
+        {% for competition in include.robot.statistics reversed %}
             <h3>{{ competition.competition }}</h3>
             {% include record.html competition=competition%}
             </div>
