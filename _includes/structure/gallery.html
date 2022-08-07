@@ -1,21 +1,4 @@
 {% assign gallery=gallery | plus: 1 %}
-
-<script>
-    function plusSlides{{gallery}}(n) {
-        showSlides{{gallery}}(slideIndex[{{gallery}}] += n);
-    }
-
-    function showSlides{{gallery}}(n) {
-        let slides = document.getElementsByClassName("gallery"+{{gallery}}+"-slide");
-        if (n > slides.length) { slideIndex[{{gallery}}] = 1 }
-        if (n < 1) { slideIndex[{{gallery}}] = slides.length }
-        for (let i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        slides[slideIndex[{{gallery}}] - 1].style.display = "block";
-    } 
-</script>
-
 <style>
     .gallery {
         display: flex;
@@ -77,10 +60,13 @@
         </div>
     </div>
     {% endfor %}
-    {% for link in include.videos %}
+    {% if include.videos %}
     <div class="gallery{{gallery}}-slide">
         <div class="video">
-        {% include structure/video.html src=link %}
+            <div class="vid-wrapper">
+                <img class="ratio" src="/assets/16x9.png" />
+                <div id="gallery-video{{gallery}}"></div>
+            </div>
         </div>
     </div>
     {% endfor %}
@@ -91,4 +77,46 @@
 <script>
     slideIndex[{{gallery}}] = 1;
     showSlides{{gallery}}(slideIndex[{{gallery}}]);
+
+    var player{{gallery}};
+    
+    function plusSlides{{gallery}}(n) {
+        showSlides{{gallery}}(slideIndex[{{gallery}}] += n);
+    }
+
+    function showSlides{{gallery}}(n) {
+        let slides = document.getElementsByClassName("gallery"+{{gallery}}+"-slide");
+        if (n > slides.length + {{include.videos.length}} - 1) { slideIndex[{{gallery}}] = 1 }
+        if (n < 1) { slideIndex[{{gallery}}] = slides.length + {{include.videos.length}} - 1 }
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        if (slideIndex[{{gallery}}] > {{include.imgs.length}}) {
+            slides[slides.length - 1].style.display = "block";
+            if (player{{gallery}}) player{{gallery}}.destroy();
+            player{{gallery}} = new YT.Player('gallery-video{{gallery}}', { 
+                videoId: {{include.videos}}[slideIndex{{gallery}}-slides.length-1],
+                playerVars: {'mute': 1},
+            });
+        } else {
+            slides[slideIndex[{{gallery}}] - 1].style.display = "block";
+        }
+    }
+
+    function createPlayer{{gallery}}() {
+        player{{gallery}} = new YT.Player('video1', { 
+            videoId: "StBj0vHMesk",
+            playerVars: {
+                'mute': 1,
+            },
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onStateChange{{gallery}}
+            }
+         });
+    }
+
+    function onStateChange{{gallery}}(event) {
+
+    }
 </script>
