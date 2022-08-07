@@ -1,5 +1,21 @@
 {% assign gallery=gallery | plus: 1 %}
 
+<script>
+    function plusSlides{{gallery}}(n) {
+        showSlides{{gallery}}(slideIndex[{{gallery}}] += n);
+    }
+
+    function showSlides{{gallery}}(n) {
+        let slides = document.getElementsByClassName("gallery"+{{gallery}}+"-slide");
+        if (n > slides.length) { slideIndex[{{gallery}}] = 1 }
+        if (n < 1) { slideIndex[{{gallery}}] = slides.length }
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex[{{gallery}}] - 1].style.display = "block";
+    } 
+</script>
+
 <style>
     .gallery {
         display: flex;
@@ -68,11 +84,11 @@
         </div>
     </div>
     {% endfor %}
-    <a class="gallery{{gallery}}-prev" onclick="plusSlides({{gallery}}, -1)">&#10094;</a>
-    <a class="gallery{{gallery}}-next" onclick="plusSlides({{gallery}}, 1)">&#10095;</a>
+    <a class="gallery{{gallery}}-prev" onclick="plusSlides{{gallery}}(-1)">&#10094;</a>
+    <a class="gallery{{gallery}}-next" onclick="plusSlides{{gallery}}(1)">&#10095;</a>
 </div>
 
 <script>
     slideIndex[{{gallery}}] = 1;
-    showSlides({{gallery}}, slideIndex[{{gallery}}]);
+    showSlides{{gallery}}(slideIndex[{{gallery}}]);
 </script>

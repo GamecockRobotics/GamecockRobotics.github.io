@@ -1,0 +1,58 @@
+<script>
+    // 2. This code loads the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // 3. This function creates an <iframe> (and YouTube player)
+    //    after the API code downloads.
+    var players = [];
+    var videoIds = [];
+    var galleryAutoplay = [];
+    function onYouTubeIframeAPIReady() {
+        
+        players.push(
+            new YT.Player('video'+index, { 
+            videoId: videoIds[index],
+            playerVars: {
+                'mute': 1,
+            },
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onStateChange
+            }
+         }));
+        player2 = new YT.Player('video2', { videoId: "iUbfNKoc-OI" });
+    }
+
+    function onPlayerReady(event) {
+        event.target.playVideo();
+    }
+
+
+    function playVideo(id) {
+        if (player) player.destroy();
+        layer = new YT.Player('video1', { 
+            videoId: id,
+            playerVars: {
+                'playsinline': 1,
+            },
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onStateChange
+            }
+         });
+    }
+
+    function onStateChange (event) {
+        if (event.data == YT.PlayerState.ENDED) {
+            event.target
+        }
+    }
+
+    function stopVideo() {
+        player.stopVideo();
+    }
+</script>
