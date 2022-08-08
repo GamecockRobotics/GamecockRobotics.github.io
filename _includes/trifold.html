@@ -56,7 +56,7 @@
     </div>
     <div style="max-width:5%;min-width: 5%;"></div>
     <div class="robot-gallery">
-        {% include structure/gallery.html imgs=include.robot.images videos=include.robot.videos %}
+        {% include structure/gallery.html imgs=include.robot.images videos=include.robot.videos autoplay=true %}
     </div>
     <div style="max-width:5%;min-width: 5%;"></div>
     <div class="robot-statistics">
@@ -72,8 +72,3 @@
         {% endfor %}
     </div>
 </div>
-
-<script>
-    slideIndex[{{gallery}}] = 1;
-    showSlides({{gallery}}, slideIndex[{{gallery}}]);
-</script>
