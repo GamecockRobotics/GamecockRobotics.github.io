@@ -55,9 +55,14 @@
         {% assign max=match.score %}
     {% endif %}
 {% endfor %}
+{% for match in include.competition.matches %}
+    {% if match.o_score > max %}
+        {% assign max=match.o_score %}
+    {% endif %}
+{% endfor %}
+{% assign max=max | plus: 25 | divided_by: 50.0 | round | times: 50 %}
 
-{% assign max=max | plus: 25 | divided_by: 50 | round | times: 50 %}
 
-{% assign settings='"scores":"rgba(0,0,255,1.0)":4;"opponent scores":"rgba(0,255,0,1.0)":4;"driver skills":"rgba(255,0,0,1.0)":1;"autonomous skills":"rgba(255,0,255,1.0)":1'%}
+{% assign settings='"scores":"rgba(0,0,255,1.0)":4;"opponent scores":"rgba(0,255,0,1.0)":4;"autonomous skills":"rgba(255,0,0,1.0)":1;"driver skills":"rgba(255,0,255,1.0)":1'%}
 
 {% include structure/scatter.html name=include.competition.competition lists=data settings=settings min=0 max=max %}

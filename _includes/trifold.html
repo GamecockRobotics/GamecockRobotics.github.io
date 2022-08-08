@@ -31,6 +31,12 @@
     .competition-scatter {
         width: 90%;
     }
+    .text h1 {
+        font-size: 48;
+    }
+    .text p {
+        font-size: 24;
+    }
 
     @media (max-width: 750px) {
         .robot-content {
@@ -51,7 +57,7 @@
         <h1>
             {{ include.robot.name }}
         </h1>
-        {{ include.robot.description }}
+        <p>{{ include.robot.description }}</p>
         </div>
     </div>
     <div style="max-width:5%;min-width: 5%;"></div>
