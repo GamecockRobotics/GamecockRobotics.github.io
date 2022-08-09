@@ -111,7 +111,6 @@
         } else {
             slides[slideIndex[{{gallery}}] - 1].style.display = "block";
             {% if include.autoplay %}
-            console.log("if statement executed");
             setTimeout(nextSlideImg{{gallery}}, 6000);
             {% endif %}
         }
