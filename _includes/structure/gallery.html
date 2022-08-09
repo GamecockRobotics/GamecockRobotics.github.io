@@ -86,6 +86,9 @@
         if (event.target.getPlayerState() == 0)
         plusSlides{{gallery}}(1);
     }
+    function nextSlideImg{{gallery}}() {
+        plusSlides{{gallery}}(1);
+    }
 
     function showSlides{{gallery}}(n) {
         let slides = document.getElementsByClassName("gallery"+{{gallery}}+"-slide");
@@ -107,6 +110,10 @@
             });
         } else {
             slides[slideIndex[{{gallery}}] - 1].style.display = "block";
+            {% if include.autoplay %}
+            console.log("if statement executed");
+            setTimeout(nextSlideImg{{gallery}}, 6000);
+            {% endif %}
         }
-    }    
+    }
 </script>
