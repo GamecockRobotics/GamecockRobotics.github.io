@@ -3,12 +3,7 @@
     position: relative;
     width: 100%;
     display: block;
-  }
-
-  .scatter-canvas .ratio {
-    display: block;
-    width: 100%;
-    height: auto;
+    padding-top: 56.25%;
   }
 
   .scatter-canvas canvas {
@@ -20,7 +15,6 @@
   }
 </style>
 <div class="scatter-canvas">
-  <img class="ratio" src="/assets/16x9.png">
   <canvas id="{{ include.name }}"></canvas>
 </div>
 {% assign xValues=include.lists | split: ";" | first %}
