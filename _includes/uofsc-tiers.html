@@ -40,18 +40,22 @@
             flex-direction: column;
         }
     }
+    .container {
+      background-color: #f3f3f3;
+      border: 1px solid #e7e7e7;
+      border-radius: 25px;
+  }
 
     ul {
         list-style-type: none;
         margin: 0;
         padding: 0;
         overflow: hidden;
-        border: 1px solid #e7e7e7;
-        background-color: #f3f3f3;
     }
 
     li {
         float: left;
+        border-right:1px solid #e7e7e7;
     }
 
     li p {
@@ -81,33 +85,42 @@
   <div class="title">
     <h1>Tiers</h1>
   </div>
-  <div class="tier-buttons">
-    <ul>
-      <li>
-        <p class="notactive" id="tier1button" onclick="activeTier1()">Tier 1</p>
-      </li>
-      <li>
-        <p class="notactive" id="tier2button" onclick="activeTier2()">Tier 2</p>
-      </li>
-      <li>
-        <p class="notactive" id="tier3button" onclick="activeTier3()">Tier 3</p>
-      </li>
-    </ul>
-  </div>
-  <div id="tier1">
-    <p>Blah Blah Blah1</p>
-    <p>Blah Blah Blah1</p>
-    <p>Blah Blah Blah1</p>
-  </div>
-  <div id="tier2">
-    <p>Blah Blah Blah2</p>
-    <p>Blah Blah Blah2</p>
-    <p>Blah Blah Blah2</p>
-  </div>
-  <div id="tier3">
-    <p>Blah Blah Blah3</p>
-    <p>Blah Blah Blah3</p>
-    <p>Blah Blah Blah3</p>
+  <div class="container">
+    <div class="tier-buttons">
+      <ul>
+        <li>
+          <p class="notactive" id="tier1button" onclick="activeTier1()">
+            Tier 1
+          </p>
+        </li>
+        <li>
+          <p class="notactive" id="tier2button" onclick="activeTier2()">
+            Tier 2
+          </p>
+        </li>
+        <li>
+          <p class="notactive" id="tier3button" onclick="activeTier3()">
+            Tier 3
+          </p>
+        </li>
+      </ul>
+    </div>
+    <div id="tier1">
+      <p>Blah Blah Blah1</p>
+      <p>Blah Blah Blah1</p>
+      <p>Blah Blah Blah1</p>
+    </div>
+
+    <div id="tier2">
+      <p>Blah Blah Blah2</p>
+      <p>Blah Blah Blah2</p>
+      <p>Blah Blah Blah2</p>
+    </div>
+    <div id="tier3">
+      <p>Blah Blah Blah3</p>
+      <p>Blah Blah Blah3</p>
+      <p>Blah Blah Blah3</p>
+    </div>
   </div>
 </div>
 
