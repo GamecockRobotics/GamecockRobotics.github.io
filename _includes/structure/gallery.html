@@ -102,7 +102,9 @@
             slides[slides.length - 1].style.display = "block";
             if (player{{gallery}}) player{{gallery}}.destroy();
             player{{gallery}} = new YT.Player('gallery-video{{gallery}}', { 
-                videoId: [{% for vid in include.videos %}"{{vid}}"{% unless forloop.last %},{% endunless %}{% endfor %}][slideIndex[{{gallery}}] - slides.length],
+                videoId: [{% for vid in include.videos %}
+                    "{{vid}}"{% unless forloop.last %},{% endunless %}
+                {% endfor %}][slideIndex[{{gallery}}] - slides.length],
                 playerVars: {'mute': 1},
                 events: {
                     'onReady': playVideo,
