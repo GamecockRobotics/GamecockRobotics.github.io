@@ -3,5 +3,8 @@
 {% include structure/ytapi.html %}
 {% for robot in site.data.robots reversed %}
     {% include trifold.html robot=robot %}
+    {% unless forloop.last %}
+    <div style="height: 1px;background-color:{{site.data.theme.neutral1}};margin-left:50px;margin-right:50px;margin-top:20px;"></div>
+    {%endunless%}
 {% endfor %}
 {% include footer.html %}
