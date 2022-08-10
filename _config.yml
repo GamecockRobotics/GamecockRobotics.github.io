@@ -12,4 +12,6 @@ github_username: GamecockRobotics
 plugins:
   - jekyll-feed
 
+github: [metadata]
+
 include: [_pages]

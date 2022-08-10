@@ -1,6 +1,14 @@
 - one:
   name: "Push Bot"
-  description: "First bot, no parts, sad boi"
+  description: >-
+    The Push Bot was the first robot created by team EZPZ. The robot was built with limited parts,
+    and had very limited functionality. Using borrowed parts, this robot had a 4 motor chassis and 
+    a single motor on a simple lever arm. This arm was  capable of flinging a single preloaded ring
+    onto a mobile goal and also lifting and moving a mobile goal. Though not incredibly complex, it
+    was capable of using a lifted mobile goal to push down the tilting platform and climbing up to
+    balance at the end of the match. The Push Bot was only used at the team's first competition,
+    Tigertown Throwdown, at Clemson University. Through a well practiced autonomous and excellent
+    driving, the team was able to beat Clemson's team at their own competition.
   images: 
     - "/assets/profiles/Riley.jpg"
     - "/assets/profiles/Nathan.jpg"
@@ -62,7 +70,30 @@
           match: "Quater Finals #4"
 - two:
   name: "Big Chungus and Lil' Sexy"
-  description: "Lots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuffLots of text and stuff"
+  description: >-
+    Big Chungus and Lil' Sexy were the first robots designed and built by the team without the
+    constraint of limited parts, however, Big Chungus was constructed completely from steel. Both
+    robots had a similar design with a treaded ring intake to place rings on the alliance mobile
+    goals held in the back of the robot. The back of these robots had a tilting mechanism that 
+    would clamp and tilt back the mobile goals. Though they both had similar designs, their 
+    implementation was very different. Lil' Sexy used a pneumatic piston to pull back the tilting 
+    mechanism. Conversely, Big Chungus used a pulley and rope system to pull back the tilting 
+    mechanism. Both robots also used four bars to lift the mobile goals onto the platform. Lil' 
+    Sexy used a piston with a locking claw to prevent other robots from stealing the mobile goal 
+    out of its grasp. Big Chungus used a motorized claw grip to pick up the mobile goals. <\p>
+    
+    <p>Big Chungus and Lil' Sexy were used in back to back Competitions in West Virginia and 
+    Salisbury, Maryland. Neither of these robots had practice on a field before the West Virginia. 
+    Throughout these competitions, with extensive practice, both the drive team and the Autonomous 
+    improved drastically. Big Chungus, though not as fast as other robots, went for the middle 
+    mobile goal first during autonomous. It would then return and grab an alliance goal and place 
+    rings on the goal to get the autonomous win point. Meanwhile, Lil' Sexy would quickly charge 
+    towards one of the neutral goals then return to place a ring on the other alliance goal for the 
+    autonomous win point. Because of the steel, it made it difficult for other robots to match the 
+    robots strength and pull the goals to the other side. This also made it difficult to park, 
+    however, with a push from Lil' Sexy, both bots were able to dual park with up to 4 mobile 
+    goals. The crowning achievment of these bots was winning the excellence award at the Salisbury 
+    Maryland competition.
   images: 
     - "/assets/profiles/Riley.jpg"
     - "/assets/profiles/Nathan.jpg"
