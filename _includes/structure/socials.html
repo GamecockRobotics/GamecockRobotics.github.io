@@ -1,3 +1,4 @@
+{% assign socialCount = 1| plus: socialCount %}
 <style>
     .social {
         height:25px;
@@ -7,15 +8,21 @@
     .social img {
         max-height: 100%;
     }
+
+    .social img:hover {
+        cursor: pointer;
+    }
+
     .socials {
         display: flex;
         flex-direction: row;
     }
 </style>
+
 <div class="socials">
     {% if include.accounts.email %}
         <div class="social">
-            <a href="mailto:{{include.accounts.email}}">
+            <a onClick="sendMail{{socialCount}}();">
                 <img src="/assets/socials/email.png">
             </a>
         </div>
@@ -56,3 +63,10 @@
         </div>
     {% endif %}
 </div>
+<script>
+    function sendMail{{socialCount}}() {
+        let domain{{socialCount}} = '{{include.accounts.domain}}';
+        let email{{socialCount}} = '{{include.accounts.email}}';
+        window.location.href = 'mailto:'+email{{socialCount}}+'@'+domain{{socialCount}};
+    }
+</script>
