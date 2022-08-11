@@ -10,10 +10,11 @@
     Tigertown Throwdown, at Clemson University. Through a well practiced autonomous and excellent
     driving, the team was able to beat Clemson's team at their own competition.
   images: 
-    - "/assets/profiles/Riley.jpg"
-    - "/assets/profiles/Nathan.jpg"
+    - "/assets/robots/PB 0.jpg"
+    - "/assets/robots/PB 1.jpg"
   videos:
-    - "wIZgvVDZc2Y"
+    - "GofHFhlcOY8"
+    - "i5_a3-osELk"
   statistics:
     - one:
       competition: Tigertown Throwdown
@@ -80,7 +81,7 @@
     mechanism. Conversely, Big Chungus used a pulley and rope system to pull back the tilting 
     mechanism. Both robots also used four bars to lift the mobile goals onto the platform. Lil' 
     Sexy used a piston with a locking claw to prevent other robots from stealing the mobile goal 
-    out of its grasp. Big Chungus used a motorized claw grip to pick up the mobile goals. <\p>
+    out of its grasp. Big Chungus used a motorized claw grip to pick up the mobile goals. </p>
     
     <p>Big Chungus and Lil' Sexy were used in back to back Competitions in West Virginia and 
     Salisbury, Maryland. Neither of these robots had practice on a field before the West Virginia. 
@@ -95,8 +96,10 @@
     goals. The crowning achievment of these bots was winning the excellence award at the Salisbury 
     Maryland competition.
   images: 
-    - "/assets/profiles/Riley.jpg"
-    - "/assets/profiles/Nathan.jpg"
+    - "/assets/robots/BC 0.jpg"
+    - "/assets/robots/BC 1.jpg"
+    - "/assets/robots/BC 2.jpg"
+    - "/assets/robots/BC 3.jpg"
   videos:
     - "TxUkqI8Vfyk"
     - "bBOLNwsfLYk"
@@ -105,6 +108,14 @@
     - "3dPSPoS2vX4"
     - "XaOrhmpBPmo"
     - "xq3YYIBHGMM"
+    - "KAbuxZODKmY"
+    - "GIDNyL-hECI"
+    - "rdvV2JVxybE"
+    - "7pih1DcDOUc"
+    - "v0vRzmKEGAg"
+    - "8isLmoizb6A"
+    - "W0WbjSCYiHM"
+    - "0iwdX9vlyRI"
   statistics:
     - one:
       competition: West Virginia VEX U Qualifier
