@@ -74,6 +74,7 @@
 </div>
 
 <script>
+    var timeoutID{{gallery}};
     slideIndex[{{gallery}}] = 1;
     showSlides{{gallery}}(slideIndex[{{gallery}}]);
 
@@ -114,7 +115,8 @@
         } else {
             slides[slideIndex[{{gallery}}] - 1].style.display = "block";
             {% if include.autoplay %}
-            setTimeout(nextSlideImg{{gallery}}, 6000);
+            clearTimeout(timeoutID);
+            timeoutID = setTimeout(nextSlideImg{{gallery}}, 6000);
             {% endif %}
         }
     }
