@@ -51,9 +51,8 @@
   <div class="navbar" id="navbar">
     <div class="centered">
     <img src="/assets/Team Logo.png">
-    {% assign pages = site.pages | where_exp: 'page', 'page.url contains "_pages"' %}
-    {% for page in pages %}
-      <a href="{{page.url}}">{{page.title}}</a>
+    {% for page in site.data.pages %}
+      <a href="{{site.url}}/{{page.url}}">{{page.name}}</a>
     {% endfor %}
   </div>
   </div>

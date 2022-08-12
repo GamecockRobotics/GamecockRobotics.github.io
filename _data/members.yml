@@ -44,13 +44,15 @@
     - Web Developer
     - Wire Manager
   personal_description: >-
-    Nathan is dual majoring in Computer Science and Mathematics in the Honors College. He enjoys outdoor activities like 
-    rock climbing and kayaking. He is also an officer and former president of cybersecurity club.
+    Nathan is dual majoring in Computer Science and Mathematics in the Honors College. He enjoys 
+    outdoor activities like rock climbing and kayaking. He is also an officer and former president 
+    of cybersecurity club.
   professional_description: >-
-    He has been doing Vex Robotics for 6 years. He was the team captain of his high school team as well as the lead 
-    programmer. Currently, Nathan acts as the treasurer for the club, managing their finances. He also works as the lead 
-    programmer for the robots as well as lead web developer for the team. He also wires the robots to ensure the cables 
-    do not get caught and the robot looks clean.
+    He has been doing Vex Robotics for 6 years. He was the team captain of his high school team as 
+    well as the lead programmer. Currently, Nathan acts as the treasurer for the club, managing 
+    their finances. He also works as the lead programmer for the robots as well as lead web 
+    developer for the team. He also wires the robots to ensure the cables do not get caught and the
+    robot looks clean.
   image: /assets/profiles/Nathan.jpg
   socials:
     github: NathanaelOliver
@@ -182,13 +184,14 @@
     - Builder
     - Driver
   personal_description: >-
-    Tommy is a Junior majoring in Mechanical Engineering. He is an eagle scout and likes to say "Howdy!" Tommy's hair though
-    not styled always has a unique and suave flow. He also works at Lowe's where he can get the team a discount on tools 
-    storage containers.
+    Tommy is a Junior majoring in Mechanical Engineering. He is an eagle scout and likes to say 
+    "Howdy!" Tommy's hair thoughnot styled always has a unique and suave flow. He also works at 
+    Lowe's where he can get the team a discount on tools and storage containers.
   professional_description: >-
-    Tommy has been doing VEX for 7 years. He is a former member of 7432E. He works as a builder for the team and is an 
-    expert at getting to hard to reach screws and dealing with stripped screws. Tommy is also an out of the box thinker and 
-    will often create unique designs. He also works as a Driver and will occasionally dual drive with Ray.
+    Tommy has been doing VEX for 7 years. He is a former member of 7432E. He works as a builder for
+    the team and is an expert at getting to hard to reach screws and dealing with stripped screws. 
+    Tommy is also an out of the box thinker and will often create unique designs. He also works as 
+    a Driver and will occasionally dual drive with Ray.
   image: /assets/profiles/Tommy.jpg
   socials:
     github:
@@ -226,10 +229,12 @@
     - Builder
     - Filmer
   personal_description: >-
-    Mia is a Junior majoring in Computer Science. She is also the secretary of the board game club on campus. Mia collects Pokémon cards and enjoys playing tabletop RPGs.
+    Mia is a Junior majoring in Computer Science. She is also the secretary of the board game club 
+    on campus. Mia collects Pokémon cards and enjoys playing tabletop RPGs.
   professional_description: >-
-    Mia has been doing VEX for 4 years. In high school, she was a builder and team captain. Now, she works as a builder for the team. At competitions she also films matches giving 
-    us excellent footage to review so that we can improve in the future.
+    Mia has been doing VEX for 4 years. In high school, she was a builder and team captain. Now, 
+    she works as a builder for the team. At competitions she also films matches giving us 
+    excellent footage to review so that we can improve in the future.
   image: /assets/profiles/Mia.jpg
   socials:
     github: MZDia
@@ -263,8 +268,8 @@
   roles:
     - Social Media Manager
   personal_description: >-
-    Jessie is an Art major who enjoys spending hours putting on makeup before going to the mall. Her fun and quirky nature 
-    contributes to the good nature of the team.
+    Jessie is an Art major who enjoys spending hours putting on makeup before going to the mall. 
+    Her fun and quirky nature contributes to the good nature of the team.
   professional_description: >- 
     This is Jessie's second year doing robotics. She works on the social media for the team.
   image: /assets/profiles/Jessie.jpg
@@ -282,12 +287,13 @@
   roles:
     - builder
   personal_description: >-
-    Will is a freshman majoring in Mechanical Engineering. He attends Midlands Technical College but plans to transfer to 
-    the Univesity of South Carolina within the next two years.
+    Will is a freshman majoring in Mechanical Engineering. He attends Midlands Technical College 
+    but plans to transfer to the Univesity of South Carolina within the next two years.
   professional_description: >-
-    Will has competed in Robotics since High School where he was first a member of Riverbluff High School before starting 
-    his own team. He worked as the main builder and programmer and most notably created the original Shopping Cart in 
-    Tipping point.
+    Will has competed in Robotics since Middle School where he first worked on Lego robotics in 
+    middle school. In high school he became a member of Riverbluff High School before going to 
+    Lexington Technology Center's team. He worked as the main builder and programmer and most 
+    notably created the original Shopping Cart in Tipping point.
   image: /assets/profiles/Will.jpg
   socials:
     github:
@@ -295,5 +301,5 @@
     twitter: 
     youtube: 
     # email and domain are separate to prevent web crawlers from accessing email address
-    email:
-    domain:
+    email: willshealy13
+    domain: gmail.com
