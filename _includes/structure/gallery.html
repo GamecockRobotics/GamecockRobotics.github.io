@@ -58,7 +58,7 @@
         background-color: rgba(0, 0, 0, 0.8);
     }
 </style>
-<div class="gallery">
+<div id="gallery{{gallery}}" class="gallery">
     {% for link in include.imgs %}
     <div class="gallery{{gallery}}-slide">
         <img src="{{link}}" style="max-width:100%; min-width: 100%;">
@@ -79,7 +79,7 @@
     showSlides{{gallery}}(slideIndex[{{gallery}}]);
 
     var player{{gallery}};
-    
+
     function plusSlides{{gallery}}(n) {
         showSlides{{gallery}}(slideIndex[{{gallery}}] += n);
     }

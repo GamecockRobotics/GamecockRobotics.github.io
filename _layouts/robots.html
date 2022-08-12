@@ -1,3 +1,12 @@
+<style>
+    body {
+      background-color: {{site.data.theme.background}};
+    }
+    body a, body p, body ul li, body ol li, body h1, body h2, body h3, body h4, body h5, body h6 {
+        color: {{ site.data.theme.on_background }}
+    }
+</style>
+<body>
 {% include header.html %}
 {% include structure/gallery-script.html %}
 {% include structure/ytapi.html %}
@@ -8,3 +17,4 @@
     {%endunless%}
 {% endfor %}
 {% include footer.html %}
+</body>
