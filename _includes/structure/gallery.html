@@ -115,8 +115,8 @@
         } else {
             slides[slideIndex[{{gallery}}] - 1].style.display = "block";
             {% if include.autoplay %}
-            clearTimeout(timeoutID);
-            timeoutID = setTimeout(nextSlideImg{{gallery}}, 6000);
+            clearTimeout(timeoutID{{gallery}});
+            timeoutID{{gallery}} = setTimeout(nextSlideImg{{gallery}}, 6000);
             {% endif %}
         }
     }
