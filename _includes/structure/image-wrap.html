@@ -68,6 +68,26 @@
             margin-left: 0px;
         }
     }
+
+    @media (max-width: 4in) {
+        .image-wrapper {
+            flex-direction: column;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .text-wrap {
+            order: 2 !important;
+            min-width: 100%;
+            margin-left: 0px;
+        }
+
+        .wrapped-image {
+            order: 1 !important;
+            width: 90%;
+            float: left;
+            margin-left: 0px;
+        }
+    }
 </style>
 
 <div class="image-wrapper">
