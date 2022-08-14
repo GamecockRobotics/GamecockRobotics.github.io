@@ -91,7 +91,7 @@
         <h2>Statistics</h2>
         {% for competition in include.robot.statistics reversed %}
             <h3>{{ competition.competition }}</h3>
-            {% include record.html competition=competition%}
+            {% include uofsc/record.html competition=competition%}
             </div>
             <h4>Matches</h4>
             <div class="competition-scatter">

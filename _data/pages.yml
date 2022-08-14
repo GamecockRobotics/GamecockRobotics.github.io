@@ -4,4 +4,10 @@
 - two:
   name: Retired Robots
   url: _pages/robots.html
+- three:
+  name: Donations
+  url: _pages/donations.html
+- four:
+  name: Sponsors
+  url: _pages/sponsors.html
   

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <style>
     body {
       background-color: {{site.data.theme.background}};
@@ -7,7 +8,7 @@
     }
 </style>
 <body>
-{% include header.html %}
+{% include structure/header.html %}
 {% include structure/gallery-script.html %}
 {% include structure/ytapi.html %}
 {% for robot in site.data.robots reversed %}
@@ -16,5 +17,5 @@
     <div style="height: 1px;background-color:{{site.data.theme.neutral1}};margin-left:50px;margin-right:50px;margin-top:20px;"></div>
     {%endunless%}
 {% endfor %}
-{% include footer.html %}
+{% include structure/footer.html %}
 </body>

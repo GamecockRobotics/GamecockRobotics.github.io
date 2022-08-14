@@ -1,6 +1,19 @@
-- one:
-  name: "Ashley Services"
-  logo: "/assets/sponsors/ashley_services.png"
-- two:
-  name: "Roper Mountain Animal Hospital"
-  logo: "/assets/sponsors/roper_mountain_animal_hospital.png"
+grants:
+  - one:
+    year: 2021
+    name: Community of Practice Grant
+    description: UofSC's Center for Integrative and Experiential Learning
+    amount: 5000
+copper:
+bronze:
+  - one:
+    year: 2021
+    name: "Roper Mountain Animal Hospital"
+    logo: "/assets/sponsors/roper_mountain_animal_hospital.png"
+silver:
+gold:
+  - one:
+    year: 2021
+    name: "Ashley Services"
+    logo: "/assets/sponsors/ashley_services.png"
+diamond:
