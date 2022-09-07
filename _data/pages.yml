@@ -1,6 +1,6 @@
 - one:
   name: About
-  url: about.html
+  url:
 - two:
   name: Team
   url: team.html
