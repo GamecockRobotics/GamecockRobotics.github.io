@@ -1,0 +1,38 @@
+<div name="sponsor-{{include.tier}}">
+    <style>
+        .sponsor {
+            padding: 10px 10px 10px 10px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .sponsor p, .sponsor h2{
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        .diamond {
+            width: 100%;
+        }
+        .copper, .bronze, .silver, .gold {
+            width: 33.33%;
+            min-width: 400px;
+        }
+
+        .gold img, .diamond img {
+            max-height:250px;
+        }
+
+        .copper img, .bronze img, .silver img {
+            height: 50px;
+        }
+
+        .sponsor img {
+            object-fit: contain;
+            max-width: 100%;
+        }
+    </style>
+    <div class="sponsor {{include.tier}}">
+        <img src="{{include.sponsor.logo}}">
+        <h2>{{include.sponsor.name}}</h2>
+        <p>{{include.sponsor.description}}</p>
+    </div>
+</div>

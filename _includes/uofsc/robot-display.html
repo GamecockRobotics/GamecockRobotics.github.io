@@ -2,13 +2,15 @@
     .robot-content {
         display: flex;
         flex-direction: row;
-        padding-top: 30px;
+        padding-bottom: 30px;
     }
 
     .column {
-        width: 60%;
-        margin-left: 100px;
-        margin-right: 100px
+        width: calc(60% - 60px);
+
+    }
+    .divider {
+        width:60px;
     }
 
     .robot-description {
@@ -24,36 +26,19 @@
         position: relative;
     }
 
-    .text {
-        margin-left: 20px;
-        margin-right: 20px;
-        text-indent: 20px;
-    }
-
     .robot-statistics {
         width: 40%;
-        float: left;
     }
 
     .competition-scatter {
-        width: 90%;
+        width: 100%;
     }
-    .text h1 {
+    .robot-description h1 {
         font-size: 48;
     }
-    .text p {
+    .robot-description p {
+        text-indent: 20px;
         font-size: 20;
-    }
-
-    @media (max-width: 1000px) {
-        .column {
-            margin-left: 20px;
-            margin-right: 20px;
-            width: 60%;
-        }
-        .robot-statistics {
-            width: 40%;
-        }
     }
 
     @media (max-width: 750px) {
@@ -61,14 +46,13 @@
             flex-direction: column;
         }
 
-        .column {
+        .divider {
+            height: 0;
             width: 100%;
         }
 
-        .robot-description, .robot-statistics, .robot-gallery {
-            margin-left: 5%;
-            margin-right: 5%;
-            width: 90%;
+        .column, .robot-description, .robot-statistics, .robot-gallery {
+            width: 100%;
         }
     }
 </style>
@@ -76,17 +60,14 @@
 <div class="robot-content">
     <div class="column">
     <div class="robot-description">
-        <div class="text">
-        <h1>
-            {{ include.robot.name }}
-        </h1>
+        <h1>{{ include.robot.name }}</h1>
         <p>{{ include.robot.description }}</p>
-        </div>
     </div>
     <div class="robot-gallery">
         {% include structure/gallery.html imgs=include.robot.images videos=include.robot.videos autoplay=true %}
     </div>
     </div>
+    <div class="divider"></div>
     <div class="robot-statistics">
         <h2>Statistics</h2>
         {% for competition in include.robot.statistics reversed %}

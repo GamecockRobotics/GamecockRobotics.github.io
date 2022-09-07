@@ -1,52 +1,24 @@
 <style>
-    .aside {
-        float: left;
-        top: 85px;
-        margin-left: 20px;
-        margin-right: 20px;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        padding: 5px 5px;
-        border: 4px solid {{site.data.theme.neutral1}};
-    }
-
     @media (max-width: 1000px) {
-        .aside {
-            margin-left: 120px;
-            border: none;
-            display: flex;
-            flex-direction: row;
-        }
-
         .vex-description {
             margin-right: 20px;
         }
-
         .video {
             min-width: 250px;
         }
     }
-
-    @media (max-width: 600px) {
-        .aside {
-            margin-left: 20px;
-            flex-direction: column;
-        }
-    }
 </style>
-<div class="aside">
-    <div class="vex-description">
-        <h1>VEX Robotics: Spin Up</h1>
-        <p>
-            Vex is a head to head competition where teams compete with two robots to score more points than the other
-            team. Teams design, build, program and drive the robots. Each year a different challenge is presented.
-        </p>
-        <p>
-            Gamecock Robotics was founded in 2021 as the robotics team for the University of South Carolina. The team
-            has 11 members and 1 faculty advisor.
-        </p>
-    </div>
-    <div class="video">
-        {% include structure/video.html src="wIZgvVDZc2Y" %}
-    </div>
+<div class="vex-description">
+    <h1>VEX Robotics: Spin Up</h1>
+    <p>
+        Vex is a head to head competition where teams compete with two robots to score more points than the other
+        team. Teams design, build, program and drive the robots. Each year a different challenge is presented.
+    </p>
+    <p>
+        Gamecock Robotics was founded in 2021 as the robotics team for the University of South Carolina. The team
+        has 11 members and 1 faculty advisor.
+    </p>
+</div>
+<div class="video">
+    {% include structure/video.html src="wIZgvVDZc2Y" %}
 </div>

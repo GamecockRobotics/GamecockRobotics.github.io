@@ -1,60 +1,115 @@
-<style> 
-    body{
-      margin:0;
-    }
-    .full-screen-width {
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style> 
+    .banner {
         position: relative;
         display: block;
         max-width: 100%;
         width: 100%;
-        height: 190px;
         margin: 0;
     }
-  
     .navbar {
-        position: sticky;
-        top: 0px;
-        height: 60px;
-        padding: 4px 16px;
-        z-index: +1;
-        background: {{site.data.theme.primary}};
-        color: {{site.data.theme.on_primary}};
+      position: sticky;
+      top: 0px;
+      height: 80px;
+      background: {{site.data.theme.primary}};
+      color: {{site.data.theme.on_primary}};
+      z-index: +1;
+      display: flex;
+      flex-direction: row;
     }
-  
     .navbar a {
       font-size: 24px;
       text-decoration: none;
-      display: block;
       padding: 14px 16px;
       float: left;
       color: {{site.data.theme.on_primary}};
     }
-  
     .centered img {
       display: block;
       padding: 4px 8px;
       height: 50px;
       float: left;
     }
-  
-    .navbar a:hover {
+    .navbar a:hover, .dropdown a:hover {
       background-color: {{site.data.theme.primary_dark}};
     }
-  
+    .links {
+      width:90%;
+      height:100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      overflow: hidden;
+    }
+    .link {
+      display: table;
+      height: 100%;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
     .centered {
+      display: table-cell;
+      text-align: center;
+      vertical-align: middle;
+    }
+    .hamburger {
+      width: 10%;
+      display: table;
+      height: 100%;
+    }
+    .dropdown {
+      display: none;
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      max-height: 100%;
+      top: 80px;
+      flex-direction: column;
+      background-color: {{site.data.theme.primary}};
+      width: 250px;
+    }
+    .dropdown a {
+      font-size: 24px;
+      text-decoration: none;
+      padding: 14px 16px;
+      float: left;
+      color: {{site.data.theme.on_primary}};
+      width: 250px;
     }
   </style>
-  <img class="full-screen-width" src="/assets/banner.png">
+  <img class="banner" src="/assets/banner.png">
   <div class="navbar" id="navbar">
-    <div class="centered">
-    <img src="/assets/Team Logo.png">
-    {% for page in site.data.pages %}
-      <a href="{{site.url}}/{{page.url}}">{{page.name}}</a>
-    {% endfor %}
+    <div class="links">
+      <div class="link">
+        <div class="centered">
+          <img src="/assets/Team Logo.png">
+        </div>
+      </div>
+      {% for page in site.data.pages %}
+      <div class="link">
+        <div class="centered">
+          <a href="{{site.url}}/{{page.url}}">{{page.name}}</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="hamburger">
+      <div class="centered">
+      <a href="javascript:void(0);" class="icon" onclick="openDropdown()">
+        <i class="fa fa-bars"></i>
+      </a>
+      </div>
+    </div>
+    <div id="dropdown" class="dropdown">
+      {% for page in site.data.pages %}
+        <a href="{{site.url}}/{{page.url}}">{{page.name}}</a>
+      {% endfor %}
+    </div>
   </div>
-  </div>
-  
+<script>
+  function openDropdown() {
+  var x = document.getElementById("dropdown");
+  if (x.style.display === "flex") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+  }
+} 
+</script>
