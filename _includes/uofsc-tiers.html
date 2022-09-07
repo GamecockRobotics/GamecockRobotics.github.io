@@ -80,6 +80,12 @@
   #tier3 {
     display: none;
   }
+  #tier4 {
+    display: none;
+  }
+  #tier5 {
+    display: none;
+  }
 </style>
 <div class="aside">
   <div class="title">
@@ -90,27 +96,34 @@
       <ul>
         <li>
           <p class="notactive" id="tier1button" onclick="activeTier1()">
-            Tier 1
+            Copper Tier
           </p>
         </li>
         <li>
           <p class="notactive" id="tier2button" onclick="activeTier2()">
-            Tier 2
+            Bronze Tier
           </p>
         </li>
         <li>
           <p class="notactive" id="tier3button" onclick="activeTier3()">
-            Tier 3
+            Silver Tier
+          </p>
+        </li>
+        <li>
+          <p class="notactive" id="tier4button" onclick="activeTier4()">
+            Gold Tier
+          </p>
+        </li>
+        <li>
+          <p class="notactive" id="tier5button" onclick="activeTier5()">
+            Diamond Tier
           </p>
         </li>
       </ul>
     </div>
-    <div id="tier1">
-      <p>Blah Blah Blah1</p>
-      <p>Blah Blah Blah1</p>
-      <p>Blah Blah Blah1</p>
+    <div id="tier1" class="copperd">
+      <p>{{include.copperd.description}}</p>
     </div>
-
     <div id="tier2">
       <p>Blah Blah Blah2</p>
       <p>Blah Blah Blah2</p>
@@ -121,6 +134,16 @@
       <p>Blah Blah Blah3</p>
       <p>Blah Blah Blah3</p>
     </div>
+    <div id="tier4">
+      <p>Blah Blah Blah4</p>
+      <p>Blah Blah Blah4</p>
+      <p>Blah Blah Blah4</p>
+    </div>
+    <div id="tier5">
+      <p>Blah Blah Blah5</p>
+      <p>Blah Blah Blah5</p>
+      <p>Blah Blah Blah5</p>
+    </div>
   </div>
 </div>
 
@@ -129,15 +152,36 @@
     document.getElementById("tier1").style.display = "block";
     document.getElementById("tier2").style.display = "none";
     document.getElementById("tier3").style.display = "none";
+    document.getElementById("tier4").style.display = "none";
+    document.getElementById("tier5").style.display = "none";
   }
   function activeTier2() {
     document.getElementById("tier1").style.display = "none";
     document.getElementById("tier2").style.display = "block";
     document.getElementById("tier3").style.display = "none";
+    document.getElementById("tier4").style.display = "none";
+    document.getElementById("tier5").style.display = "none";
   }
   function activeTier3() {
     document.getElementById("tier1").style.display = "none";
     document.getElementById("tier2").style.display = "none";
     document.getElementById("tier3").style.display = "block";
+    document.getElementById("tier4").style.display = "none";
+    document.getElementById("tier5").style.display = "none";
   }
+  function activeTier4() {
+    document.getElementById("tier1").style.display = "none";
+    document.getElementById("tier2").style.display = "none";
+    document.getElementById("tier3").style.display = "none";
+    document.getElementById("tier4").style.display = "block";
+    document.getElementById("tier5").style.display = "none";
+  }
+  function activeTier5() {
+    document.getElementById("tier1").style.display = "none";
+    document.getElementById("tier2").style.display = "none";
+    document.getElementById("tier3").style.display = "none";
+    document.getElementById("tier4").style.display = "none";
+    document.getElementById("tier5").style.display = "block";
+  }
+  
 </script>
