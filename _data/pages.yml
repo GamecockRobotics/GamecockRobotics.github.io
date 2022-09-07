@@ -1,6 +1,6 @@
 - one:
   name: About
-  url: _pages/about.html
+  url: _pages
 - two:
   name: Team
   url: _pages/team.html

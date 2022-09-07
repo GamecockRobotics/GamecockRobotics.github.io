@@ -76,12 +76,13 @@
   </style>
   <img class="banner" src="/assets/banner.png">
   <div class="navbar" id="navbar">
-    <div class="links">
-      <div class="link">
+    <div class="link">
         <div class="centered">
           <img src="/assets/Team Logo.png">
         </div>
       </div>
+    <div class="links" style="display: none;" id="spacer"></div>
+    <div class="links" id="links">
       {% for page in site.data.pages %}
       <div class="link">
         <div class="centered">
@@ -108,8 +109,14 @@
   var x = document.getElementById("dropdown");
   if (x.style.display === "flex") {
     x.style.display = "none";
+    document.getElementById("links").style.display = "flex";
+    document.getElementById("spacer").style.display = "none";
+
   } else {
     x.style.display = "flex";
+    document.getElementById("links").style.display = "none";
+    document.getElementById("spacer").style.display = "flex";
+
   }
 } 
 </script>
