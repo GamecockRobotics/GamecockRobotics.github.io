@@ -1,34 +1,29 @@
 copperd:
-  - one: 
-    description: >-
-      Name on T-shirt 
-      Name & Logo on Sponsors page of Website 
+  description:
+    - one: Name on T-shirt
+    - two: Name & Logo on Sponsors page of Website
 bronzed:
-  - one: 
-    description: >-
-      Name on T-Shirt 
-      Name & Logo on Sponsors page of Website 
-      Logo on all pages of Website 
+  description:
+    - one: Name on T-shirt
+    - two: Name & Logo on Sponsors page of Website
+    - three: Logo on all pages of Website 
 silverd:
-- one: 
-    description: >-
-      Logo on Banner 
-      Name on T-shirt 
-      Name & Logo on Sponsors page of Website 
-      Logo on all pages of Website 
+  description: >-
+    Logo on Banner 
+    Name on T-shirt 
+    Name & Logo on Sponsors page of Website 
+    Logo on all pages of Website 
 goldd:
-  - one: 
-    description: >- 
-      Name & Logo on Banner 
-      Name & Logo on T-Shirt 
-      Name & Logo on Sponsors page of Website 
-      Name & Logo on all Pages of Website 
+  description: >- 
+    Name & Logo on Banner 
+    Name & Logo on T-Shirt 
+    Name & Logo on Sponsors page of Website 
+    Name & Logo on all Pages of Website 
 diamondd:
-  - one: 
-    description: >- 
-      Priority Placement of Name & Logo on Banner 
-      Priority Placement of Name & Logo on T-shirts 
-      Name & Logo on Sponsors page of Website  
-      Name & Logo on all Pages of Website 
-      Shoutouts on all social media 
-      Logo on Robot 
+  description: >- 
+    Priority Placement of Name & Logo on Banner 
+    Priority Placement of Name & Logo on T-shirts 
+    Name & Logo on Sponsors page of Website  
+    Name & Logo on all Pages of Website 
+    Shoutouts on all social media 
+    Logo on Robot 
