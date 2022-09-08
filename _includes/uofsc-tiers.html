@@ -121,12 +121,9 @@
         </li>
       </ul>
     </div>
-    <div id="tier1" class="copper"> 
-      <ol>
-        {% for tierDescription in site.data.tiers.copper.description %}
-        <li>{{tierDescription}} </li> <br>
-        {% endfor %}
-      </ol>
+    <div id="tier1" class="copper">
+      {% assign tierName = "copper" %} 
+      {% include uofsc/tiers.html %}
     </div>
     <div id="tier2">
       <ol>

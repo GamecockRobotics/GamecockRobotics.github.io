@@ -1,2 +1,8 @@
-{% capture tierDescription %}
-{% endcapture %}
+{render "_includes/uofsc-tiers.html", tierName: tierName}
+<div class = "description">
+    <ol>
+        {% for tierDescription in site.data.tiers.tierName.description %}
+        <li>{{tierDescription}} </li> <br>
+        {% endfor %}
+    </ol>
+</div>
