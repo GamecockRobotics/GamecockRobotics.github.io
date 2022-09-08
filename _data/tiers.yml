@@ -1,29 +1,34 @@
-copperd:
+copper:
+  cost: $500
   description:
-    - one: Name on T-shirt
-    - two: Name & Logo on Sponsors page of Website
-bronzed:
+    -  Name on T-shirt
+    -  Name & Logo on Sponsors page of Website
+bronze:
+  cost: $500
   description:
-    - one: Name on T-shirt
-    - two: Name & Logo on Sponsors page of Website
-    - three: Logo on all pages of Website 
-silverd:
-  description: >-
-    Logo on Banner 
-    Name on T-shirt 
-    Name & Logo on Sponsors page of Website 
-    Logo on all pages of Website 
-goldd:
-  description: >- 
-    Name & Logo on Banner 
-    Name & Logo on T-Shirt 
-    Name & Logo on Sponsors page of Website 
-    Name & Logo on all Pages of Website 
-diamondd:
-  description: >- 
-    Priority Placement of Name & Logo on Banner 
-    Priority Placement of Name & Logo on T-shirts 
-    Name & Logo on Sponsors page of Website  
-    Name & Logo on all Pages of Website 
-    Shoutouts on all social media 
-    Logo on Robot 
+    - Name on T-shirt
+    - Name & Logo on Sponsors page of Website
+    - Logo on all pages of Website 
+silver:
+  cost: $500
+  description:
+    - Logo on Banner
+    - Name on T-shirt
+    - Name & Logo on Sponsors page of Website
+    - Logo on all pages of Website
+gold:
+  cost: $500
+  description:
+    - Name & Logo on Banner
+    - Name & Logo on T-Shirt
+    - Name & Logo on Sponsors page of Website
+    - Name & Logo on all Pages of Website
+diamond:
+  cost: $500
+  description:
+    - Priority Placement of Name & Logo on Banner
+    - Priority Placement of Name & Logo on T-shirts
+    - Name & Logo on Sponsors page of Website
+    - Name & Logo on all Pages of Website
+    - Shoutouts on all social media
+    - Logo on Robot

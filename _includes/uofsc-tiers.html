@@ -121,28 +121,40 @@
         </li>
       </ul>
     </div>
-    <div id="tier1" class="copperd">
-      <p>{{ site.data.tiers.copperd.description }}</p>
+    <div id="tier1" class="copper"> 
+      <ol>
+        {% for tierDescription in site.data.tiers.copper.description %}
+        <li>{{tierDescription}} </li> <br>
+        {% endfor %}
+      </ol>
     </div>
     <div id="tier2">
-      <p>Blah Blah Blah2</p>
-      <p>Blah Blah Blah2</p>
-      <p>Blah Blah Blah2</p>
+      <ol>
+        {% for tierDescription in site.data.tiers.bronze.description %}
+        <li>{{tierDescription}} </li> <br>
+        {% endfor %}
+      </ol>
     </div>
     <div id="tier3">
-      <p>Blah Blah Blah3</p>
-      <p>Blah Blah Blah3</p>
-      <p>Blah Blah Blah3</p>
+      <ol>
+        {% for tierDescription in site.data.tiers.silver.description %}
+        <li>{{tierDescription}} </li> <br>
+        {% endfor %}
+      </ol>
     </div>
     <div id="tier4">
-      <p>Blah Blah Blah4</p>
-      <p>Blah Blah Blah4</p>
-      <p>Blah Blah Blah4</p>
+      <ol>
+        {% for tierDescription in site.data.tiers.gold.description %}
+        <li>{{tierDescription}} </li> <br>
+        {% endfor %}
+      </ol>
     </div>
     <div id="tier5">
-      <p>Blah Blah Blah5</p>
-      <p>Blah Blah Blah5</p>
-      <p>Blah Blah Blah5</p>
+      <ol>
+        {% for tierDescription in site.data.tiers.diamond.description %}
+        <li>{{tierDescription}} </li> <br>
+        {% endfor %}
+      </ol>
     </div>
   </div>
 </div>
