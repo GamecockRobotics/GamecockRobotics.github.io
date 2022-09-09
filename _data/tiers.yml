@@ -1,5 +1,5 @@
 copper:
-  cost: $500
+  cost: $100
   description:
     -  Name on T-shirt
     -  Name & Logo on Sponsors page of Website
@@ -10,21 +10,21 @@ bronze:
     - Name & Logo on Sponsors page of Website
     - Logo on all pages of Website 
 silver:
-  cost: $500
+  cost: $1000
   description:
     - Logo on Banner
     - Name on T-shirt
     - Name & Logo on Sponsors page of Website
     - Logo on all pages of Website
 gold:
-  cost: $500
+  cost: $3000
   description:
     - Name & Logo on Banner
     - Name & Logo on T-Shirt
     - Name & Logo on Sponsors page of Website
     - Name & Logo on all Pages of Website
 diamond:
-  cost: $500
+  cost: $5000
   description:
     - Priority Placement of Name & Logo on Banner
     - Priority Placement of Name & Logo on T-shirts

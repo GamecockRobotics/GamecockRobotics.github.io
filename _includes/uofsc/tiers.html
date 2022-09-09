@@ -1,7 +1,13 @@
-{render "_includes/uofsc-tiers.html", tierName: tierName}
+<style>
+    h2 {
+        text-align: center;
+    }
+</style>
 <div class = "description">
+    {% assign tierName = include.tier %}
+    <h2>{{site.data.tiers[tierName].cost}} </h2>
     <ol>
-        {% for tierDescription in site.data.tiers.tierName.description %}
+        {% for tierDescription in site.data.tiers[tierName].description %}
         <li>{{tierDescription}} </li> <br>
         {% endfor %}
     </ol>
