@@ -1,15 +1,18 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style> 
     .banner {
-        position: relative;
+      position: relative;
+      margin: 0;
+      background-color: black;
+    }
+    .banner img{
         display: block;
         max-width: 100%;
         width: 100%;
-        margin: 0;
     }
     .navbar {
       position: sticky;
-      top: 0px;
+      top: 60px;
       height: 80px;
       background: {{site.data.theme.primary}};
       color: {{site.data.theme.on_primary}};
@@ -73,15 +76,45 @@
       color: {{site.data.theme.on_primary}};
       width: 250px;
     }
+    .title-banner {
+      background-color: black;
+      height: 90px;
+      top: 0px;
+      color: white;
+      position: sticky;
+      z-index: +1;
+      font-size: 48px;
+      display: flex;
+      flex-direction: column;
+    }
+    .title-banner img {
+      border: solid 2px;
+      height: 36px;
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+    }
   </style>
-  <img class="banner" src="/assets/banner.png">
+  <div class="banner">
+    <img src="/assets/banner.png">
+  </div>
+  <div class="title-banner">
+    <div style="display: flex; flex-direction: row; height: 60px;">
+      <img src="/assets/sponsors/uofsc.jpg">
+      South Carolina
+    </div>
+    <div style="height:30px;font-size: 24px; margin-left:10px;">
+    College of Engineering and Computing
+    </div>
+  </div>
   <div class="navbar" id="navbar">
-    <div class="links">
-      <div class="link">
+    <div class="link">
         <div class="centered">
           <img src="/assets/Team Logo.png">
         </div>
       </div>
+    <div class="links" style="display: none;" id="spacer"></div>
+    <div class="links" id="links">
       {% for page in site.data.pages %}
       <div class="link">
         <div class="centered">
@@ -108,8 +141,14 @@
   var x = document.getElementById("dropdown");
   if (x.style.display === "flex") {
     x.style.display = "none";
+    document.getElementById("links").style.display = "flex";
+    document.getElementById("spacer").style.display = "none";
+
   } else {
     x.style.display = "flex";
+    document.getElementById("links").style.display = "none";
+    document.getElementById("spacer").style.display = "flex";
+
   }
 } 
 </script>

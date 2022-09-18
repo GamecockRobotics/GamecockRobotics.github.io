@@ -72,7 +72,7 @@
 
     li p.active {
         color: white;
-        background-color: #04AA6D;
+        background-color: #4e5b56;
     }
     #tier2 {
     display: none;
@@ -86,6 +86,9 @@
   #tier5 {
     display: none;
   }
+  h1 {
+    text-align: center;
+  }
 </style>
 <div class="aside">
   <div class="title">
@@ -95,7 +98,7 @@
     <div class="tier-buttons">
       <ul>
         <li>
-          <p class="notactive" id="tier1button" onclick="activeTier1()">
+          <p class="active" id="tier1button" onclick="activeTier1()">
             Copper Tier
           </p>
         </li>
@@ -121,34 +124,36 @@
         </li>
       </ul>
     </div>
-    <div id="tier1" class="copperd">
-      <p>{{include.copperd.description}}</p>
+    <div id="tier1" class="copper">
+      {% include uofsc/tiers.html tier="copper" %}
     </div>
     <div id="tier2">
-      <p>Blah Blah Blah2</p>
-      <p>Blah Blah Blah2</p>
-      <p>Blah Blah Blah2</p>
+      {% include uofsc/tiers.html tier="bronze" %}
     </div>
     <div id="tier3">
-      <p>Blah Blah Blah3</p>
-      <p>Blah Blah Blah3</p>
-      <p>Blah Blah Blah3</p>
+      {% include uofsc/tiers.html tier="silver" %}
     </div>
     <div id="tier4">
-      <p>Blah Blah Blah4</p>
-      <p>Blah Blah Blah4</p>
-      <p>Blah Blah Blah4</p>
+      {% include uofsc/tiers.html tier="gold" %}
     </div>
     <div id="tier5">
-      <p>Blah Blah Blah5</p>
-      <p>Blah Blah Blah5</p>
-      <p>Blah Blah Blah5</p>
+      {% include uofsc/tiers.html tier="diamond" %}
     </div>
   </div>
 </div>
 
 <script>
+  const tier1ele = document.getElementById("tier1button");
+  const tier2ele = document.getElementById("tier2button");
+  const tier3ele = document.getElementById("tier3button");
+  const tier4ele = document.getElementById("tier4button");
+  const tier5ele = document.getElementById("tier5button");
   function activeTier1() {
+    tier1ele.className = "active";
+    tier2ele.className = "notactive";
+    tier3ele.className = "notactive";
+    tier4ele.className = "notactive";
+    tier5ele.className = "notactive";
     document.getElementById("tier1").style.display = "block";
     document.getElementById("tier2").style.display = "none";
     document.getElementById("tier3").style.display = "none";
@@ -156,6 +161,11 @@
     document.getElementById("tier5").style.display = "none";
   }
   function activeTier2() {
+    tier1ele.className = "notactive";
+    tier2ele.className = "active";
+    tier3ele.className = "notactive";
+    tier4ele.className = "notactive";
+    tier5ele.className = "notactive";
     document.getElementById("tier1").style.display = "none";
     document.getElementById("tier2").style.display = "block";
     document.getElementById("tier3").style.display = "none";
@@ -163,6 +173,12 @@
     document.getElementById("tier5").style.display = "none";
   }
   function activeTier3() {
+    tier1ele.className = "notactive";
+    tier2ele.className = "notactive";
+    tier3ele.className = "active";
+    tier4ele.className = "notactive";
+    tier5ele.className = "notactive";
+    document.getElementById("tier3").className = "active";
     document.getElementById("tier1").style.display = "none";
     document.getElementById("tier2").style.display = "none";
     document.getElementById("tier3").style.display = "block";
@@ -170,6 +186,11 @@
     document.getElementById("tier5").style.display = "none";
   }
   function activeTier4() {
+    tier1ele.className = "notactive";
+    tier2ele.className = "notactive";
+    tier3ele.className = "notactive";
+    tier4ele.className = "active";
+    tier5ele.className = "notactive";
     document.getElementById("tier1").style.display = "none";
     document.getElementById("tier2").style.display = "none";
     document.getElementById("tier3").style.display = "none";
@@ -177,6 +198,11 @@
     document.getElementById("tier5").style.display = "none";
   }
   function activeTier5() {
+    tier1ele.className = "notactive";
+    tier2ele.className = "notactive";
+    tier3ele.className = "notactive";
+    tier4ele.className = "notactive";
+    tier5ele.className = "active";
     document.getElementById("tier1").style.display = "none";
     document.getElementById("tier2").style.display = "none";
     document.getElementById("tier3").style.display = "none";
