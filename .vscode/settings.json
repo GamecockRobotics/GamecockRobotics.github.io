@@ -1,4 +1,5 @@
 {
     "html.validate.scripts": false,
-    "html.validate.styles": false
+    "html.validate.styles": false,
+    "pros.showInstallOnStartup": false
 }
