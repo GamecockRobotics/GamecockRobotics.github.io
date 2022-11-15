@@ -1,12 +1,18 @@
-<div name="sponsor-{{include.tier}}">
+<div name="sponsor">
     <style>
         .sponsor {
-            padding: 10px 10px 10px 10px;
+            padding: 10px 30px 10px 10px;
             display: flex;
             flex-wrap: wrap;
+            float: left;
         }
+
+        .table{ 
+            max-height: 121px;
+        }
+
         .sponsor p, .sponsor h2{
-            margin-top: 20px;
+            margin-top: 5px;
             margin-left: 20px;
         }
         .diamond {
@@ -14,25 +20,43 @@
         }
         .copper, .bronze, .silver, .gold {
             width: 33.33%;
-            min-width: 400px;
         }
-
         .gold img, .diamond img {
-            max-height:250px;
+            max-height:50px;
+            max-width: 50px;
         }
 
         .copper img, .bronze img, .silver img {
-            height: 50px;
+            height: 40x;
+            max-width: 40px;
+            padding: 0px 0px 0px 40px;
         }
-
         .sponsor img {
             object-fit: contain;
-            max-width: 100%;
+            max-width: 80%;
+            float: left;
         }
     </style>
-    <div class="sponsor {{include.tier}}">
-        <img src="{{include.sponsor.logo}}">
-        <h2>{{include.sponsor.name}}</h2>
-        <p>{{include.sponsor.description}}</p>
-    </div>
+    
+    <table class = "table">
+        <tr class = "tab">
+            <style>
+                .table {
+                    max-height: 121px;
+                }
+            </style>
+            <th class = "gold">
+                <img src = "/assets/stars/gold.png">
+            </th>
+            <th>
+                <img src = "/assets/sponsors/ashley_services.png">
+            </th>
+            <th class = "bronze">
+                <img src = "/assets/stars/bronze.png">
+            </th>
+            <th>
+                <img src = "/assets/sponsors/roper_mountain_animal_hospital.png">
+            </th>
+        </tr>
+    </table>
 </div>
