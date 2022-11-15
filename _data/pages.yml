@@ -7,4 +7,6 @@
 - three:
   name: Retired Robots
   url: robots.html
-  
+- four:
+  name: Sponsors
+  url: _pages/sponsors.html
