@@ -25,7 +25,7 @@
 </style>
 <div class="news">
     <h1 style="margin-left: 40px;">News and Updates</h1>
-    {% for article in news_articles %}
+    {% for article in news_articles reversed %}
     <div class="article">
         <p style="display: flex; justify-content: space-between;">
             <span><b>{{article.title}}</b></span>
