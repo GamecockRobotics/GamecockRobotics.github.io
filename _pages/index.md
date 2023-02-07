@@ -52,6 +52,9 @@ title: "About"
         ul {
             list-style-type: none;
         }
+        #my{
+        zoom: 90%;
+        }
     @media (max-width: 1000px) {
             .main {
                 width: 100%;
