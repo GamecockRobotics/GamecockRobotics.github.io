@@ -38,6 +38,7 @@ title: "About"
             width: 50%;
             min-width: 240px;
             margin-top: 100px;
+            padding-left: 30px;
         }
         .twitter {
             padding-bottom: 40px;
