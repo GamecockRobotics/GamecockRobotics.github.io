@@ -56,78 +56,59 @@ title: "About"
         #my{
         zoom: 90%;
         }
-    @media (max-width: 1000px) {
-            .main {
-                width: 100%;
-                order: 2;
-            }
-            .about-content {
-                flex-direction: column;
-            }
-            .sidebar {
-                width: 50%;
-                width: 400px;
-            }
-            .sticky {
-                position: static;
-            }
-            .row {
-                flex-direction: column;
-            }
-            .row .text {
-                width: 90%;
-                margin-left: 5%;
-            }
-            .row .video {
-                width: 90%;
-                margin-left: 5%;
-                margin-top: 0px;
-            }
-        .iframe-container{
-            position: relative;
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
             width: 100%;
-            padding-bottom: 56.25%; 
-            height: 0;
+            max-width: 1500px;
+            margin: 0 15px;
+            overflow: hidden;
+            flex-direction: row;
+        }            
+        .left-div{
+            width: 48%;
+            overflow: auto;
+            padding 10px;
         }
-        .iframe-container iframe{
-            position: absolute;
-            top:0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        .right-div{
+            width: 48%;
+            overflow: auto;
+            padding 10px;
         }
         .responsive {
-            max-width: 80%;
+            max-width: 60%;
             height: auto;
+            align-items: center;
+            justify-content: center;
         }
-}
-    </style>
-    <div class="about-content">
-        <div class="main">
-            <div class="row">
-                <div class="text">
-                    <h1 style="text-align: center">VEX Robotics: Spin Up</h1>
-                    <p>
-                        Vex is a head to head competition where teams compete with two robots to score more points than the other team. Teams design, build, program and drive the robots. Each year a different challenge is presented.
-                    </p>
-                    <p>
-                        Gamecock Robotics was founded in 2021 as the robotics team for the University of South Carolina. The team has 11 members and 1 faculty advisor.
-                    </p> 
-                    <div class = "iframe-container">
-                    <iframe width="680" height="383" src="https://www.youtube.com/embed/wIZgvVDZc2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    </div>
+    @media (max-width: 1000px) {
+        .left-div, .right-div {
+            width: 100%;
+            height: auto;
+            margin: 10px 0;
+        }
+    }
+</style>
+    <div class = "container">
+        <div class = "left-div">
+            <h1 style="text-align: center">VEX Robotics: Spin Up</h1>
+                <p>
+                    Vex is a head to head competition where teams compete with two robots to score more points than the other team. Teams design, build, program and drive the robots. Each year a different challenge is presented.
+                </p>
+                <p>
+                    Gamecock Robotics was founded in 2021 as the robotics team for the University of South Carolina. The team has 11 members and 1 faculty advisor.
+                </p> 
+                <div class = "iframe-container">
+                <iframe width="680" height="383" src="https://www.youtube.com/embed/wIZgvVDZc2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
-            </div>
-        <!-- The thing -->
-        <div class = "discord">
-                    <h2>Join Our Discord!</h2>
-                    <p>If you are interested in learning more about our club, joining our club, or just joining a community of people passionate about robotics, join our discord. Our discord has all of our important announcements, meeting times and discussions about robot designs.</p>
-                    <img src="/assets/socials/discord-qrcode.png" alt = "discord qr code" class = "responsive">
+                <h1 style = "text-align: center">Join Our Discord!</h1>
+                        <p>If you are interested in learning more about our club, joining our club, or just joining a community of people passionate about robotics, join our discord. Our discord has all of our important announcements, meeting times and discussions about robot designs.</p>
+                        <img src="/assets/socials/discord-qrcode.png" alt = "discord qr code" class = "responsive">
         </div>
-        </div>
-        <div class = "twitter">
-            <a class="twitter-timeline" data-lang="en" data-width="750" data-height="1270" data-theme="light" href="https://twitter.com/GamecockRobotix?ref_src=twsrc%5Etfw">Tweets by GamecockRobotix</a> 
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+        <div class = "right-div">
+                <a class="twitter-timeline" data-lang="en" data-width="750" data-height="1270" data-theme="light" href="https://twitter.com/GamecockRobotix?ref_src=twsrc%5Etfw">Tweets by GamecockRobotix</a> 
+                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
         </div>
     </div>
 </div>
