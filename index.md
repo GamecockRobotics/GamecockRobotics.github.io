@@ -65,6 +65,7 @@ title: "About"
             margin: 0 15px;
             overflow: hidden;
             flex-direction: row;
+            padding-bottom: 50px;
         }            
         .left-div{
             width: 48%;
