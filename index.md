@@ -91,25 +91,32 @@ title: "About"
         }
     }
 </style>
-    <div class = "container">
-        <div class = "left-div">
-            <h1 style="text-align: center">VEX Robotics: Spin Up</h1>
-                <p>
-                    Vex is a head to head competition where teams compete with two robots to score more points than the other team. Teams design, build, program and drive the robots. Each year a different challenge is presented.
-                </p>
-                <p>
-                    Gamecock Robotics was founded in 2021 as the robotics team for the University of South Carolina. The team has 11 members and 1 faculty advisor.
-                </p> 
-                <div class = "iframe-container">
-                <iframe width="680" height="383" src="https://www.youtube.com/embed/wIZgvVDZc2Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    <div class="about-content">
+        <div class="main">
+            <div class="row">
+                <div class="text">
+                    <h1 style="text-align: center">VEX Robotics: Over Under</h1>
+                    <p>
+                        Every year the RECF holds robotics competitions using the VEX ecosystem. Gamecock Robotics competes in the category "VEX U". VEX U is for University teams and allows for teams to use advanced materials and building techniques such as CNC milling and 3D printing. This years game is named "Over Under"
+                    </p>
+                    <p>
+                        Gamecock Robotics was founded in 2021 as the robotics team for the University of South Carolina. The team has 11 members and 1 faculty advisor.
+                    </p> 
+                    <div class = "iframe-container">
+                    <iframe width="680" height="383" src="https://www.youtube.com/watch?v=dvDqEI7qO34&pp=ygUOdmV4IG92ZXIgdW5kZXI%3D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
                 </div>
-                <h1 style = "text-align: center">Join Our Discord!</h1>
-                        <p>If you are interested in learning more about our club, joining our club, or just joining a community of people passionate about robotics, join our discord. Our discord has all of our important announcements, meeting times and discussions about robot designs.</p>
-                        <img src="/assets/socials/discord-qrcode.png" alt = "discord qr code" class = "responsive">
+            </div>
+        <!-- The thing -->
+        <div class = "discord">
+                    <h2>Join Our Discord!</h2>
+                    <p>If you are interested in learning more about our club, joining our club, or just joining a community of people passionate about robotics, join our discord. Our discord has all of our important announcements, meeting times and discussions about robot designs.</p>
+                    <img src="/assets/socials/discord-qrcode.png" alt = "discord qr code" class = "responsive">
         </div>
-        <div class = "right-div">
-                <a class="twitter-timeline" data-lang="en" data-width="750" data-height="1270" data-theme="light" href="https://twitter.com/GamecockRobotix?ref_src=twsrc%5Etfw">Tweets by GamecockRobotix</a> 
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+        </div>
+        <div class = "twitter">
+            <a class="twitter-timeline" data-lang="en" data-width="750" data-height="1270" data-theme="light" href="https://twitter.com/GamecockRobotix?ref_src=twsrc%5Etfw">Tweets by GamecockRobotix</a> 
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
         </div>
     </div>
 </div>
