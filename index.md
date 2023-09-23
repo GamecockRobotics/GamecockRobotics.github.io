@@ -103,7 +103,7 @@ title: "About"
                         Gamecock Robotics was founded in 2021 as the robotics team for the University of South Carolina. The team has 11 members and 1 faculty advisor.
                     </p> 
                     <div class = "iframe-container">
-                    <iframe width="680" height="383" src="https://www.youtube.com/watch?v=dvDqEI7qO34&pp=ygUOdmV4IG92ZXIgdW5kZXI%3D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dvDqEI7qO34?si=UV_fQya-GOKbylQW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
