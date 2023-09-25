@@ -2,6 +2,6 @@
 {{include.member.first}} {{include.member.last}}
 {% endcapture %}
 {% capture subtitle %}
-{% for role in include.member.roles %}——{{role}}{% endfor %}
+{% for roles in include.member.roles %}——{{roles}}{% endfor %}
 {% endcapture %}
 {% include structure/image-wrap.html title=title subtitle=subtitle socials=include.member.socials first_paragraph=include.member.personal_description second_paragraph=include.member.professional_description image=include.member.image %}

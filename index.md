@@ -114,9 +114,5 @@ title: "About"
                     <img src="/assets/socials/discord-qrcode.png" alt = "discord qr code" class = "responsive">
         </div>
         </div>
-        <div class = "twitter">
-            <a class="twitter-timeline" data-lang="en" data-width="750" data-height="1270" data-theme="light" href="https://twitter.com/GamecockRobotix?ref_src=twsrc%5Etfw">Tweets by GamecockRobotix</a> 
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-        </div>
     </div>
 </div>

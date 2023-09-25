@@ -1,15 +1,9 @@
 - one:
-  name: About
+  name: Home
   url:
 - two:
   name: Team
   url: team.html
 - three:
-  name: Retired Robots
-  url: robots.html
-- four:
   name: Sponsors
   url: sponsors.html
-- five:
-  name: Calendar
-  url: calander.html
