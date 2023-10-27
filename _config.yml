@@ -11,6 +11,7 @@ github_username: GamecockRobotics
 # Build settings
 plugins:
   - jekyll-feed
+  - jekyll-tidy
 
 github: [metadata]
 

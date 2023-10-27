@@ -1,146 +1,58 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <style> 
-    .banner {
-      position: relative;
-      margin: 0;
-      background-color: black;
-    }
-    .banner img{
-        display: block;
-        max-width: 100%;
-        width: 100%;
-    }
-    .navbar {
-      font-family: Verdana, Geneva, Tahoma, sans-serif;
-      position: sticky;
-      top: 0px;
-      height: 80px;
-      background: {{site.data.theme.primary}};
-      color: {{site.data.theme.on_primary}};
-      z-index: +1;
-      display: flex;
-      flex-direction: row;
-    }
-    .navbar a {
-      font-size: 24px;
-      text-decoration: none;
-      padding: 14px 16px;
-      float: left;
-      color: {{site.data.theme.on_primary}};
-    }
-    .centered img {
-      display: block;
-      padding: 4px 8px;
-      height: 50px;
-      float: left;
-    }
-    .navbar a:hover, .dropdown a:hover {
-      background-color: {{site.data.theme.primary_dark}};
-    }
-    .links {
-      width:90%;
-      height:100%;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      overflow: hidden;
-    }
-    .link {
-      display: table;
-      height: 100%;
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-    .centered {
-      display: table-cell;
-      text-align: center;
-      vertical-align: middle;
-    }
-    .hamburger {
-      width: 10%;
-      display: table;
-      height: 100%;
-    }
-    .dropdown {
-      display: none;
-      position: absolute;
-      top: 80px;
-      flex-direction: column;
-      background-color: {{site.data.theme.primary}};
-      width: 250px;
-    }
-    .dropdown a {
-      font-size: 24px;
-      text-decoration: none;
-      padding: 14px 16px;
-      float: left;
-      color: {{site.data.theme.on_primary}};
-      width: 250px;
-    }
-    .title-banner {
-      background-color: black;
-      height: 90px;
-      top: 0px;
-      color: white;
-      position: sticky;
-      z-index: +1;
-      font-size: 48px;
-      display: flex;
-      flex-direction: column;
-    }
-    .title-banner img {
-      border: solid 2px;
-      height: 36px;
-      margin-top: 10px;
-      margin-left: 10px;
-      margin-right: 10px;
-    }
-  </style>
-  <div class="banner">
-    <img src="/assets/banner.png">
-  </div>
-  <div class="navbar" id="navbar">
-    <div class="link">
-        <div class="centered">
-          <img src="/assets/Team Logo.png">
-        </div>
-      </div>
-    <div class="links" style="display: none;" id="spacer"></div>
-    <div class="links" id="links">
-      {% for page in site.data.pages %}
-      <div class="link">
-        <div class="centered">
-          <a href="{{site.url}}/{{page.url}}">{{page.name}}</a>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
-    <div class="hamburger">
-      <div class="centered">
-      <a href="javascript:void(0);" class="icon" onclick="openDropdown()">
-        <i class="fa fa-bars"></i>
-      </a>
-      </div>
-    </div>
-    <div id="dropdown" class="dropdown">
-      {% for page in site.data.pages %}
-        <a href="{{site.url}}/{{page.url}}">{{page.name}}</a>
-      {% endfor %}
-    </div>
-  </div>
-<script>
-  function openDropdown() {
-  var x = document.getElementById("dropdown");
-  if (x.style.display === "flex") {
-    x.style.display = "none";
-    document.getElementById("links").style.display = "flex";
-    document.getElementById("spacer").style.display = "none";
-
-  } else {
-    x.style.display = "flex";
-    document.getElementById("links").style.display = "none";
-    document.getElementById("spacer").style.display = "flex";
-
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<style>
+  .banner {
+    position: relative;
+    margin: 0;
+    background-color: black;
   }
-} 
-</script>
+  .banner img{
+      display: block;
+      max-width: 100%;
+      width: 100%;
+  }
+  .navbar {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: sticky;
+    top: 0px;
+    height: 80px;
+    background: {{site.data.theme.primary}};
+    color: {{site.data.theme.on_primary}};
+    z-index: +1;
+    display: flex;
+    flex-direction: row;
+  }
+  .centered img {
+    display: block;
+    padding: 4px 8px;
+    height: 50px;
+    float: left;
+  }
+  .link {
+    display: table;
+    height: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .centered {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    font-size: xx-large;
+  }
+</style>
+<div class="banner">
+  <img src="/assets/banner.png" />
+</div>
+<div class="navbar" id="navbar">
+  <div class="link">
+    <div class="centered">
+      <img src="/assets/Team Logo.png" />
+    </div>
+  </div>
+  <div class="link">
+    <div class="centered">Gamecock Robotics</div>
+  </div>
+</div>

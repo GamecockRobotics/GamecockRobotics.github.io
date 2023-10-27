@@ -36,3 +36,4 @@ gem "webrick", "~> 1.7"
 
 gem 'faraday-retry'
 gem 'liquid', '>= 4.0.4'
+

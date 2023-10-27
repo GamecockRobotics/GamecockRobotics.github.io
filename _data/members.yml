@@ -1,17 +1,3 @@
-- zero:
-  first: Gamecock
-  last: Robotics
-  professional_description: >-
-    Gamecock Robotics is a VEX U team at the University of South Carolina founded in 2021.
-  image: /assets/profiles/Team.jpg
-  socials:
-    github: GamecockRobotics
-    linkedin:
-    twitter: "@GamecockRobotix"
-    youtube: "UCw-1Fo8wyoWa7u3VpQxfQLQ"
-    # email and domain are separate to prevent web crawlers from accessing email address
-    email: sovexu
-    domain: mailbox.sc.edu
 - one:
   first: Nathanael
   last: Oliver
@@ -31,8 +17,8 @@
   socials:
     github: NathanaelOliver
     linkedin:
-    twitter: 
-    youtube: 
+    twitter:
+    youtube:
     # email and domain are separate to prevent web crawlers from accessing email address
     email: no2
     domain: email.sc.edu
@@ -50,10 +36,10 @@
     coaches the drivers during matches to optimize scoring.
   image: /assets/profiles/Sav.jpg
   socials:
-    github: SavHuf 
+    github: SavHuf
     linkedin:
-    twitter: 
-    youtube: 
+    twitter:
+    youtube:
     # email and domain are separate to prevent web crawlers from accessing email address
     email: sgh4
     domain: email.sc.edu
@@ -68,7 +54,7 @@
     PROFESSINAL DESC
   image: /assets/profiles/Aaron.jpg
   socials:
-    github: 
+    github:
     linkedin:
     twitter:
     youtube:

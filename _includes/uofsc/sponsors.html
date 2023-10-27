@@ -1,0 +1,10 @@
+<div class="sponsor-content">
+  <h1>Sponsors</h1>
+  <div class="sponsors">
+    {% for sponsor in site.data.sponsors.sponsors %} {% include
+    structure/sponsor.html sponsor=sponsor %} {% endfor %}
+  </div>
+  <h1>Grants</h1>
+  {% for grant in site.data.sponsors.grants %} {% include structure/grant.html
+  grant=grant %} {% endfor %}
+</div>
