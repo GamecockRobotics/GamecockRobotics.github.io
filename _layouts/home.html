@@ -1,24 +1,22 @@
 <!DOCTYPE html>
 <style>
-    body {
-      background-color: {{ site.data.theme.background }};
-      margin:0px;
-    }
-    body a, body p, body ul li, body ol li, body h1, body h2, body h3, body h4, body h5, body h6 {
-        color: {{ site.data.theme.on_background }}
-    }
-    .content {
-        max-width: 2000px;
-        margin: auto;
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-top: 40px;
-    }
+  body {
+    background-color: {{ site.data.theme.background }};
+    margin:0px;
+  }
+  body a, body p, body ul li, body ol li, body h1, body h2, body h3, body h4, body h5, body h6 {
+      color: {{ site.data.theme.on_background }}
+  }
+  .content {
+      max-width: 2000px;
+      margin: auto;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-top: 40px;
+  }
 </style>
 <body>
-    {% include structure/header.html %}
-    <div class="content">
-        {{ content }}
-    </div>
-    {% include structure/footer.html %}
+  {% include structure/header.html %}
+  <div class="content">{{ content }}</div>
+  {% include structure/footer.html %}
 </body>
